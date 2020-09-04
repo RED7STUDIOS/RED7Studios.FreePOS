@@ -20,8 +20,6 @@ namespace RED7Studios.TMBApp
 {
     public partial class CreateOrder : Form
     {
-        string databaseConnection = "Server=52.187.233.224;Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;";
-
         MySqlConnection conn = new MySqlConnection("Server = 52.187.233.224; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
 
         public CreateOrder()

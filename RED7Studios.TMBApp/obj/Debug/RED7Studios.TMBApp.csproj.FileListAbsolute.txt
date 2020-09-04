@@ -69,3 +69,9 @@ G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.csp
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.exe
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.pdb
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.PrintInvoice.resources
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\MetroFramework.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\MetroFramework.Fonts.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RED7StudiosUI.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RED7StudiosUI.pdb
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.frmLogin.resources
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.frmDashboard.resources
