@@ -17,7 +17,7 @@ namespace RED7Studios.TMBApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateOrder());
+            Application.Run(new PrintInvoice());
         }
     }
 }

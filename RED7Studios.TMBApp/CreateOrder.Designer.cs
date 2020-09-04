@@ -32,12 +32,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_balance = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_paid = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_net = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_discount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -100,66 +94,11 @@
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(340, 378);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 13);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Balance";
-            // 
-            // txt_balance
-            // 
-            this.txt_balance.Location = new System.Drawing.Point(395, 375);
-            this.txt_balance.Name = "txt_balance";
-            this.txt_balance.Size = new System.Drawing.Size(91, 20);
-            this.txt_balance.TabIndex = 43;
-            this.txt_balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(317, 352);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 13);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Paid Amount";
-            // 
-            // txt_paid
-            // 
-            this.txt_paid.Location = new System.Drawing.Point(395, 349);
-            this.txt_paid.Name = "txt_paid";
-            this.txt_paid.Size = new System.Drawing.Size(91, 20);
-            this.txt_paid.TabIndex = 41;
-            this.txt_paid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(322, 326);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Net Amount";
-            // 
-            // txt_net
-            // 
-            this.txt_net.Location = new System.Drawing.Point(395, 323);
-            this.txt_net.Name = "txt_net";
-            this.txt_net.Size = new System.Drawing.Size(91, 20);
-            this.txt_net.TabIndex = 39;
-            this.txt_net.Text = "0";
-            this.txt_net.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(168, 323);
+            this.label6.Location = new System.Drawing.Point(339, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 38;
@@ -167,7 +106,7 @@
             // 
             // txt_discount
             // 
-            this.txt_discount.Location = new System.Drawing.Point(225, 320);
+            this.txt_discount.Location = new System.Drawing.Point(396, 320);
             this.txt_discount.Name = "txt_discount";
             this.txt_discount.Size = new System.Drawing.Size(90, 20);
             this.txt_discount.TabIndex = 37;
@@ -333,12 +272,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_Save);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_balance);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt_paid);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_net);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_discount);
             this.Controls.Add(this.label5);
@@ -367,12 +300,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_balance;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_paid;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_net;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_discount;
         private System.Windows.Forms.Label label5;

@@ -107,7 +107,7 @@ namespace RED7Studios.TMBApp
                     int total = Convert.ToInt16(txt_sub.Text) - Convert.ToInt16(txt_discount.Text);
 
                     string Query = "Insert into invoice_master (date, total, discount, item, itemprice, itemqty, itemtotal) values " +
-                       "(NOW(), " + total + ", " + txt_discount.Text + ", " + cmb_items.Text + ", " + txt_price.Text + ", " + txt_qty.Text + ", " + txt_total.Text + ")";
+                       "(NOW(), " + total + ", " + txt_discount.Text + ", '" + cmb_items.Text + "', " + txt_price.Text + ", " + txt_qty.Text + ", " + txt_total.Text + ")";
                     //This is  MySqlConnection here i have created the object and pass my connection string.  
                     //This is command class which will handle the query and connection object.  
                     MySqlCommand command = new MySqlCommand(Query, conn);
