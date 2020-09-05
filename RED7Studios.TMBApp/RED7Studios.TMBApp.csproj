@@ -169,7 +169,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
     <None Include="Resources\AdminTasks.png" />
     <None Include="Resources\OrderList.png" />
     <None Include="Resources\ExitIcon.png" />

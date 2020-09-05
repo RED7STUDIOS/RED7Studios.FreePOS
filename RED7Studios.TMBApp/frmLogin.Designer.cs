@@ -96,7 +96,7 @@
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.CustomColorScheme = false;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLogin.Location = new System.Drawing.Point(207, 222);
+            this.btnLogin.Location = new System.Drawing.Point(246, 222);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(306, 52);
             this.btnLogin.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.mtMakayla, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.mtAdministrator, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(207, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(246, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -128,7 +128,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.tbUsername, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tbPassword, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(207, 164);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(246, 164);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -150,14 +150,14 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(720, 453);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(799, 451);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 453);
+            this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Name = "frmLogin";
             this.ShowIcon = false;

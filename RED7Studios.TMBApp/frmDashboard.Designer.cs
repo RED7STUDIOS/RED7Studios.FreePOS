@@ -46,7 +46,7 @@
             // 
             // mtAdminTasks
             // 
-            this.mtAdminTasks.Location = new System.Drawing.Point(638, 132);
+            this.mtAdminTasks.Location = new System.Drawing.Point(637, 135);
             this.mtAdminTasks.Name = "mtAdminTasks";
             this.mtAdminTasks.Size = new System.Drawing.Size(150, 150);
             this.mtAdminTasks.Style = MetroFramework.MetroColorStyle.Teal;
@@ -77,7 +77,7 @@
             // 
             // mtLogout
             // 
-            this.mtLogout.Location = new System.Drawing.Point(638, 288);
+            this.mtLogout.Location = new System.Drawing.Point(637, 291);
             this.mtLogout.Name = "mtLogout";
             this.mtLogout.Size = new System.Drawing.Size(150, 150);
             this.mtLogout.Style = MetroFramework.MetroColorStyle.Red;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 451);
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.mtAdminTasks);
             this.Controls.Add(this.mtOrderList);
