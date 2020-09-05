@@ -34,5 +34,25 @@ namespace RED7Studios.TMBApp
         {
             mtAdminTasks.Visible = true;
         }
+
+        private void mtCreateOrder_Click(object sender, EventArgs e)
+        {
+            Hide();
+            CreateOrder createOrder = new CreateOrder();
+            createOrder.Show();
+        }
+
+        private void frmDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
+
+        private void mtOrderList_Click(object sender, EventArgs e)
+        {
+            Hide();
+            OrderList list = new OrderList();
+            list.Show();
+        }
     }
 }

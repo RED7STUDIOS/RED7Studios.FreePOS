@@ -75,3 +75,10 @@ G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RED7StudiosUI.dll
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RED7StudiosUI.pdb
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.frmLogin.resources
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.frmDashboard.resources
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Telerik.WinControls.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Telerik.WinControls.UI.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\TelerikCommon.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Telerik.WinControls.xml
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Telerik.WinControls.UI.xml
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.exe.licenses
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.TMBApp.OrderList.resources

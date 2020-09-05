@@ -66,17 +66,15 @@ namespace RED7Studios.TMBApp
                     }
                 }
 
-                
-
                 if (table.Rows.Count <= 0)
                 {
                     // invalid
-                    MessageBox.Show("Invalid");
+                    //MessageBox.Show("Invalid");
                 }
                 else
                 {
                     // correct
-                    MessageBox.Show("Correct");
+                    //MessageBox.Show("Correct");
                     Hide();
 
                     frmDashboard dash = new frmDashboard();
@@ -99,6 +97,16 @@ namespace RED7Studios.TMBApp
         private void mtAdministrator_Click(object sender, EventArgs e)
         {
             tbUsername.Text = "admin";
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

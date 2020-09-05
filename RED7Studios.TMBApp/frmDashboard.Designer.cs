@@ -74,6 +74,7 @@
             this.mtOrderList.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtOrderList.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.mtOrderList.UseTileImage = true;
+            this.mtOrderList.Click += new System.EventHandler(this.mtOrderList_Click);
             // 
             // mtLogout
             // 
@@ -105,6 +106,7 @@
             this.mtCreateOrder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtCreateOrder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.mtCreateOrder.UseTileImage = true;
+            this.mtCreateOrder.Click += new System.EventHandler(this.mtCreateOrder_Click);
             // 
             // frmDashboard
             // 
@@ -121,6 +123,7 @@
             this.Name = "frmDashboard";
             this.ShowIcon = false;
             this.Text = "Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDashboard_FormClosing);
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.ResumeLayout(false);
 
