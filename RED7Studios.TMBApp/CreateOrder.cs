@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 // DB INFO:
 // IP: 52.187.233.224
@@ -26,28 +20,47 @@ namespace RED7Studios.TMBApp
         public CreateOrder()
         {
             InitializeComponent();
-
-            
         }
 
         private void CreateOrder_Load(object sender, EventArgs e)
         {
-            ListCat();   
+            FillCustomersCombo();
+            FillItemsCombo();
         }
 
-        public void ListCat()
+        public void FillCustomersCombo()
         {
-            DataTable linkcat = new DataTable("linkcat");
+            cmb_customers.Items.Clear();
+
+            DataTable customertable = new DataTable("customertable");
             using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.233.224; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {
-                    da.Fill(linkcat);
+                    da.Fill(customertable);
                 }
             }
-            foreach (DataRow da in linkcat.Rows)
+            foreach (DataRow da in customertable.Rows)
             {
-                comboBox1.Items.Add(da[0].ToString());
+                cmb_customers.Items.Add(da[0].ToString());
+            }
+        }
+
+        public void FillItemsCombo()
+        {
+            cmb_items.Items.Clear();
+
+            DataTable itemtable = new DataTable("itemtable");
+            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.233.224; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
+            {
+                using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT name FROM items WHERE name <> 'NULL'", sqlConn))
+                {
+                    da.Fill(itemtable);
+                }
+            }
+            foreach (DataRow da in itemtable.Rows)
+            {
+                cmb_items.Items.Add(da[0].ToString());
             }
         }
 
@@ -93,17 +106,97 @@ namespace RED7Studios.TMBApp
 
         private void cmb_items_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
             if (listView1.Items.Count > 0)
             {
+
+                //
+                // ITEM
+                //
+
+                ArrayList aList_item = new ArrayList();
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    string columns = String.Empty;
+                    columns += listView1.Items[i].Text;
+                    aList_item.Add(columns);
+                }
+
+                string item = "";
+
+                foreach (var items in aList_item)
+                {
+                    item += items + ";";
+                }
+
+                //
+                // PRICE
+                //
+
+                ArrayList aList_price = new ArrayList();
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    string columns = String.Empty;
+                    columns += listView1.Items[i].SubItems[1].Text;
+                    aList_price.Add(columns);
+                }
+
+                string price = "";
+
+                foreach (var prices in aList_price)
+                {
+                    price += prices + ";";
+                }
+
+                //
+                // QTY
+                //
+
+                ArrayList aList_qty = new ArrayList();
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    string columns = String.Empty;
+                    columns += listView1.Items[i].SubItems[2].Text;
+                    aList_qty.Add(columns);
+                }
+
+                string qty = "";
+
+                foreach (var qtys in aList_qty)
+                {
+                    qty += qtys + ";";
+                }
+
+                //
+                // TOTAL
+                //
+
+                ArrayList aList_total = new ArrayList();
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    string columns = String.Empty;
+                    columns += listView1.Items[i].SubItems[3].Text;
+                    aList_total.Add(columns);
+                }
+
+                string total = "";
+
+                foreach (var totals in aList_total)
+                {
+                    total += totals + ";";
+                }
+
                 try
                 {
+                    item = item.Remove(item.Length - 1, 1);
+
                     string Query = "Insert into invoice_master (customer, date, total, discount, item, itemprice, itemqty, itemtotal) values " +
-                       "('" + comboBox1.Text + "', " + "NOW(), " + textBox1.Text + ", " + txt_discount.Text + ", '" + cmb_items.Text + "', " + txt_price.Text + ", " + txt_qty.Text + ", " + txt_total.Text + ")";
+                   "('" + cmb_customers.Text + "', " + "NOW(), " + textBox1.Text + ", " + txt_discount.Text + ", '" + item + "', '" + price + "', '" + qty + "', '" + total + "')";
+
                     //This is  MySqlConnection here i have created the object and pass my connection string.  
                     //This is command class which will handle the query and connection object.  
                     MySqlCommand command = new MySqlCommand(Query, conn);
@@ -122,7 +215,7 @@ namespace RED7Studios.TMBApp
 
         private void txt_total_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cmb_items_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -155,16 +248,24 @@ namespace RED7Studios.TMBApp
 
         private void AddDiscountToTotal()
         {
-            int total = Convert.ToInt32(txt_sub.Text) - Convert.ToInt32(txt_discount.Text);
-            if (total.ToString().Contains("-"))
+            if (txt_discount.Text == "")
             {
-                MessageBox.Show("You are forbidden from making the total in to the minus zone. The total price has been set to 0.", "SYSTEM");
-                txt_discount.Text = txt_sub.Text;
-                textBox1.Text = "0";
+                txt_discount.Text = "0";
             }
             else
             {
-                textBox1.Text = total.ToString();
+                int total = Convert.ToInt32(txt_sub.Text) - Convert.ToInt32(txt_discount.Text);
+
+                if (total.ToString().Contains("-"))
+                {
+                    MessageBox.Show("You are forbidden from making the total in to the minus zone. The total price has been set to 0.", "SYSTEM");
+                    txt_discount.Text = txt_sub.Text;
+                    textBox1.Text = "0";
+                }
+                else
+                {
+                    textBox1.Text = total.ToString();
+                }
             }
         }
 
@@ -176,6 +277,52 @@ namespace RED7Studios.TMBApp
         private void txt_sub_TextChanged(object sender, EventArgs e)
         {
             AddDiscountToTotal();
+        }
+
+        Bitmap memoryImage;
+
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
+
+            CreateOrder thisForm = new CreateOrder();
+            thisForm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CaptureScreen();
+
+            printDocument1.DefaultPageSettings.Landscape = true;
+
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+            printDialog1.Document = printDocument1;
+
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, e.PageBounds);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FillCustomersCombo();
+            FillItemsCombo();
         }
     }
 }

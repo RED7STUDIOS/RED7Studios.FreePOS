@@ -1,14 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // DB INFO:
@@ -101,7 +93,7 @@ namespace RED7Studios.TMBApp
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
         }
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
