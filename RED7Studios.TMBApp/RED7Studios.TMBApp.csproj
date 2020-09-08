@@ -131,6 +131,18 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTS\frmLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\frmLicense.Designer.cs">
+      <DependentUpon>frmLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTS\frmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\frmLicense.resx">
+      <DependentUpon>frmLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderList.resx">
       <DependentUpon>OrderList.cs</DependentUpon>
