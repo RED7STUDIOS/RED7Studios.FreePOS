@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{86516082-6F79-4DD6-9921-79FAD6B10247}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>RED7Studios.TMBApp</RootNamespace>
-    <AssemblyName>RED7Studios.TMBApp</AssemblyName>
+    <RootNamespace>RED7Studios.FreePOS</RootNamespace>
+    <AssemblyName>RED7Studios.FreePOS</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -131,6 +131,24 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTS\frmDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\frmDatabase.Designer.cs">
+      <DependentUpon>frmDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTS\frmDatabaseSkipped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\frmDatabaseSkipped.Designer.cs">
+      <DependentUpon>frmDatabaseSkipped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTS\frmDefaultAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\frmDefaultAdmin.Designer.cs">
+      <DependentUpon>frmDefaultAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTS\frmLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +177,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\frmDatabase.resx">
+      <DependentUpon>frmDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\frmDatabaseSkipped.resx">
+      <DependentUpon>frmDatabaseSkipped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\frmDefaultAdmin.resx">
+      <DependentUpon>frmDefaultAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTS\frmLicense.resx">
       <DependentUpon>frmLicense.cs</DependentUpon>

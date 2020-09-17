@@ -1,15 +1,8 @@
 ﻿using RED7Studios.UI.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RED7Studios.TMBApp.FTS
+namespace RED7Studios.FreePOS.FTS
 {
     public partial class frmWelcome : ModernForm
     {
@@ -34,6 +27,22 @@ namespace RED7Studios.TMBApp.FTS
         private void frmWelcome_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmWelcome_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void frmWelcome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Z && (e.Control))
+            {
+                Hide();
+
+                frmDatabaseSkipped skipped = new frmDatabaseSkipped();
+                skipped.Show();
+            }
         }
     }
 }

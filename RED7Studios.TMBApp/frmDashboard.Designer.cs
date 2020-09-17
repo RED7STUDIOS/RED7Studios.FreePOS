@@ -1,4 +1,4 @@
-﻿namespace RED7Studios.TMBApp
+﻿namespace RED7Studios.FreePOS
 {
     partial class frmDashboard
     {
@@ -53,7 +53,7 @@
             this.mtAdminTasks.TabIndex = 6;
             this.mtAdminTasks.Text = "Admin Tasks";
             this.mtAdminTasks.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtAdminTasks.TileImage = global::RED7Studios.TMBApp.Properties.Resources.AdminTasks;
+            this.mtAdminTasks.TileImage = global::RED7Studios.FreePOS.Properties.Resources.AdminTasks;
             this.mtAdminTasks.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtAdminTasks.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtAdminTasks.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
@@ -69,7 +69,7 @@
             this.mtOrderList.TabIndex = 5;
             this.mtOrderList.Text = "Order List";
             this.mtOrderList.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtOrderList.TileImage = global::RED7Studios.TMBApp.Properties.Resources.OrderList;
+            this.mtOrderList.TileImage = global::RED7Studios.FreePOS.Properties.Resources.OrderList;
             this.mtOrderList.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtOrderList.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtOrderList.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
@@ -85,7 +85,7 @@
             this.mtLogout.TabIndex = 4;
             this.mtLogout.Text = "Log Out";
             this.mtLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtLogout.TileImage = global::RED7Studios.TMBApp.Properties.Resources.ExitIcon;
+            this.mtLogout.TileImage = global::RED7Studios.FreePOS.Properties.Resources.ExitIcon;
             this.mtLogout.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtLogout.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtLogout.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
@@ -101,7 +101,7 @@
             this.mtCreateOrder.TabIndex = 3;
             this.mtCreateOrder.Text = "Create Order";
             this.mtCreateOrder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtCreateOrder.TileImage = global::RED7Studios.TMBApp.Properties.Resources.CreateOrder;
+            this.mtCreateOrder.TileImage = global::RED7Studios.FreePOS.Properties.Resources.CreateOrder;
             this.mtCreateOrder.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtCreateOrder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtCreateOrder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;

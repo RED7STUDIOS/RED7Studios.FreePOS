@@ -9,7 +9,7 @@ using System.Windows.Forms;
 // Password : Vf7gd5*3
 // Database : macarons_storeapp
 
-namespace RED7Studios.TMBApp
+namespace RED7Studios.FreePOS
 {
     public partial class frmLogin : Form
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RED7Studios.TMBApp", "RED7Studios.TMBApp\RED7Studios.TMBApp.csproj", "{86516082-6F79-4DD6-9921-79FAD6B10247}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RED7Studios.FreePOS", "RED7Studios.TMBApp\RED7Studios.FreePOS.csproj", "{86516082-6F79-4DD6-9921-79FAD6B10247}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RED7Studios.TMBApp.Demo", "RED7Studios.TMBApp.Demo\RED7Studios.TMBApp.Demo.csproj", "{0032FEC1-75F2-447B-BE7B-E5CAC1E53408}"
 EndProject

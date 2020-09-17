@@ -1,4 +1,4 @@
-﻿namespace RED7Studios.TMBApp
+﻿namespace RED7Studios.FreePOS
 {
     partial class CreateOrder
     {

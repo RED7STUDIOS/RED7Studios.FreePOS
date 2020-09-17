@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace RED7Studios.TMBApp
+namespace RED7Studios.FreePOS
 {
     public partial class OrderList : Form
     {
@@ -62,6 +62,11 @@ namespace RED7Studios.TMBApp
         {
             frmDashboard dash = new frmDashboard();
             dash.Show();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

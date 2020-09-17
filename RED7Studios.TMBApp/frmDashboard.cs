@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace RED7Studios.TMBApp
+namespace RED7Studios.FreePOS
 {
     public partial class frmDashboard : Form
     {

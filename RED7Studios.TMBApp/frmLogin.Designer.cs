@@ -1,4 +1,4 @@
-﻿namespace RED7Studios.TMBApp
+﻿namespace RED7Studios.FreePOS
 {
     partial class frmLogin
     {
@@ -50,7 +50,7 @@
             this.mtAdministrator.TabIndex = 0;
             this.mtAdministrator.Text = "Administrator";
             this.mtAdministrator.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtAdministrator.TileImage = global::RED7Studios.TMBApp.Properties.Resources.UserIcon;
+            this.mtAdministrator.TileImage = global::RED7Studios.FreePOS.Properties.Resources.UserIcon;
             this.mtAdministrator.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtAdministrator.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtAdministrator.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
@@ -66,7 +66,7 @@
             this.mtMakayla.TabIndex = 2;
             this.mtMakayla.Text = "Makayla";
             this.mtMakayla.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtMakayla.TileImage = global::RED7Studios.TMBApp.Properties.Resources.UserIcon;
+            this.mtMakayla.TileImage = global::RED7Studios.FreePOS.Properties.Resources.UserIcon;
             this.mtMakayla.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtMakayla.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtMakayla.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;

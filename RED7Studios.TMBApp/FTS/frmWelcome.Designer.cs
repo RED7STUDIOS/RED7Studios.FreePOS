@@ -1,4 +1,4 @@
-﻿namespace RED7Studios.TMBApp.FTS
+﻿namespace RED7Studios.FreePOS.FTS
 {
     partial class frmWelcome
     {
@@ -38,7 +38,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label2.Location = new System.Drawing.Point(13, 50);
+            this.label2.Location = new System.Drawing.Point(12, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(732, 288);
             this.label2.TabIndex = 1;
@@ -48,7 +48,7 @@
             // 
             this.btnNext.CustomColorScheme = false;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.btnNext.Location = new System.Drawing.Point(12, 369);
+            this.btnNext.Location = new System.Drawing.Point(11, 368);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(230, 70);
             this.btnNext.TabIndex = 2;
@@ -60,7 +60,7 @@
             // 
             this.modernButton2.CustomColorScheme = false;
             this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton2.Location = new System.Drawing.Point(557, 369);
+            this.modernButton2.Location = new System.Drawing.Point(556, 368);
             this.modernButton2.Name = "modernButton2";
             this.modernButton2.Size = new System.Drawing.Size(230, 70);
             this.modernButton2.TabIndex = 3;
@@ -80,6 +80,7 @@
             this.Controls.Add(this.modernButton2);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.label2);
+            this.KeyPreview = true;
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -88,6 +89,8 @@
             this.ShowIcon = false;
             this.Text = "Welcome";
             this.Load += new System.EventHandler(this.frmWelcome_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmWelcome_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmWelcome_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

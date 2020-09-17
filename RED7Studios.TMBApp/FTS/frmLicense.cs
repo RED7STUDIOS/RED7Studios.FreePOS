@@ -1,19 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
+using RED7Studios.FreePOS.Properties;
 using RED7Studios.UI.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // freepos_user
 // Wupt26*0
 
-namespace RED7Studios.TMBApp.FTS
+namespace RED7Studios.FreePOS.FTS
 {
     public partial class frmLicense : ModernForm
     {
@@ -45,7 +40,7 @@ namespace RED7Studios.TMBApp.FTS
         {
             try
             {
-                adapter = new MySqlDataAdapter("SELECT `license` FROM `licenses` WHERE `license` = '" + tbLicense.Text + "'", conn);
+                adapter = new MySqlDataAdapter("SELECT `license`, `type` FROM `licenses` WHERE `license` = '" + tbLicense.Text + "' AND `type` = '" + Settings.Default.license_type + "'", conn);
                 adapter.Fill(table);
 
                 DataRow[] currentRows = table.Select(
@@ -87,6 +82,11 @@ namespace RED7Studios.TMBApp.FTS
             {
                 MessageBox.Show("An error occured: " + ex.Message, "CRITICAL ERROR!");
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

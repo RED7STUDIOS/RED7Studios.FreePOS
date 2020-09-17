@@ -1,8 +1,9 @@
-﻿using System;
+﻿using RED7Studios.FreePOS.FTS;
+using System;
 using System.Windows.Forms;
 
 
-namespace RED7Studios.TMBApp
+namespace RED7Studios.FreePOS
 {
     static class Program
     {
@@ -14,7 +15,7 @@ namespace RED7Studios.TMBApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmWelcome());
         }
     }
 }
