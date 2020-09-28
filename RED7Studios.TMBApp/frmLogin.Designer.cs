@@ -96,7 +96,7 @@
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.CustomColorScheme = false;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLogin.Location = new System.Drawing.Point(246, 222);
+            this.btnLogin.Location = new System.Drawing.Point(245, 222);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(306, 52);
             this.btnLogin.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.mtMakayla, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.mtAdministrator, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(246, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(245, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -128,7 +128,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.tbUsername, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tbPassword, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(246, 164);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(245, 164);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -144,21 +144,28 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 33);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(799, 451);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(797, 417);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ColorScheme.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(64)))), ((int)(((byte)(101)))));
+            this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
+            this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
+            this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
             this.Controls.Add(this.tableLayoutPanel3);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.Text = "Login";

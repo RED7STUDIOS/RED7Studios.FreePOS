@@ -46,7 +46,7 @@
             // 
             // mtAdminTasks
             // 
-            this.mtAdminTasks.Location = new System.Drawing.Point(637, 135);
+            this.mtAdminTasks.Location = new System.Drawing.Point(636, 132);
             this.mtAdminTasks.Name = "mtAdminTasks";
             this.mtAdminTasks.Size = new System.Drawing.Size(150, 150);
             this.mtAdminTasks.Style = MetroFramework.MetroColorStyle.Teal;
@@ -62,7 +62,7 @@
             // 
             // mtOrderList
             // 
-            this.mtOrderList.Location = new System.Drawing.Point(168, 12);
+            this.mtOrderList.Location = new System.Drawing.Point(168, 45);
             this.mtOrderList.Name = "mtOrderList";
             this.mtOrderList.Size = new System.Drawing.Size(150, 150);
             this.mtOrderList.Style = MetroFramework.MetroColorStyle.Teal;
@@ -78,7 +78,7 @@
             // 
             // mtLogout
             // 
-            this.mtLogout.Location = new System.Drawing.Point(637, 291);
+            this.mtLogout.Location = new System.Drawing.Point(636, 288);
             this.mtLogout.Name = "mtLogout";
             this.mtLogout.Size = new System.Drawing.Size(150, 150);
             this.mtLogout.Style = MetroFramework.MetroColorStyle.Red;
@@ -94,7 +94,7 @@
             // 
             // mtCreateOrder
             // 
-            this.mtCreateOrder.Location = new System.Drawing.Point(12, 12);
+            this.mtCreateOrder.Location = new System.Drawing.Point(12, 45);
             this.mtCreateOrder.Name = "mtCreateOrder";
             this.mtCreateOrder.Size = new System.Drawing.Size(150, 150);
             this.mtCreateOrder.Style = MetroFramework.MetroColorStyle.Teal;
@@ -110,16 +110,22 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ColorScheme.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(64)))), ((int)(((byte)(101)))));
+            this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
+            this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
+            this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
             this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.mtAdminTasks);
             this.Controls.Add(this.mtOrderList);
             this.Controls.Add(this.mtLogout);
             this.Controls.Add(this.mtCreateOrder);
+            this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(32, 39);
             this.Name = "frmDashboard";
             this.ShowIcon = false;
             this.Text = "Dashboard";

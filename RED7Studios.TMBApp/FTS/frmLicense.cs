@@ -12,7 +12,7 @@ namespace RED7Studios.FreePOS.FTS
 {
     public partial class frmLicense : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.233.224; Database=freepos;Uid=freepos_user;Pwd=Wupt26*0;");
+        MySqlConnection conn = new MySqlConnection("Server = 52.187.197.110; Database=freepos;Uid=freepos_user;Pwd=Wupt26*0;");
 
         MySqlDataAdapter adapter;
 

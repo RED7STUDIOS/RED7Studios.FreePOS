@@ -1,9 +1,10 @@
-﻿using System;
+﻿using RED7Studios.UI.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace RED7Studios.FreePOS
 {
-    public partial class frmDashboard : Form
+    public partial class frmDashboard : ModernForm
     {
         public frmDashboard()
         {

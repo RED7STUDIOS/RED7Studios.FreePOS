@@ -1,13 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
+using RED7Studios.UI.Forms;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
 namespace RED7Studios.FreePOS
 {
-    public partial class OrderList : Form
+    public partial class OrderList : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.233.224; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
+        MySqlConnection conn = new MySqlConnection("Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
         public OrderList()
         {
             InitializeComponent();
@@ -16,7 +17,7 @@ namespace RED7Studios.FreePOS
         public void ListCat()
         {
             DataTable linkcat = new DataTable("linkcat");
-            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.233.224; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
+            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {

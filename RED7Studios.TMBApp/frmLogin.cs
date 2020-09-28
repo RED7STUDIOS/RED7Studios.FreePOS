@@ -1,19 +1,20 @@
 ﻿using MySql.Data.MySqlClient;
+using RED7Studios.UI.Forms;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
 // DB INFO:
-// IP: 52.187.233.224
+// IP: 52.187.197.110
 // Username : macarons_storeapp
 // Password : Vf7gd5*3
 // Database : macarons_storeapp
 
 namespace RED7Studios.FreePOS
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.233.224; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
+        MySqlConnection conn = new MySqlConnection("Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
 
         MySqlDataAdapter adapter;
 

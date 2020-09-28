@@ -67,3 +67,6 @@ G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.pdb
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.FTS.frmDatabaseSkipped.resources
 G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.FTS.frmDefaultAdmin.resources
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\AutoUpdater.NET.dll
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\AutoUpdater.NET.pdb
+G:\Github\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\AutoUpdater.NET.xml
