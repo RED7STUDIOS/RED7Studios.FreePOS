@@ -28,50 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mtAdministrator = new MetroFramework.Controls.MetroTile();
-            this.mtMakayla = new MetroFramework.Controls.MetroTile();
             this.tbUsername = new MetroFramework.Controls.MetroTextBox();
             this.tbPassword = new MetroFramework.Controls.MetroTextBox();
             this.btnLogin = new RED7Studios.UI.Controls.ModernButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // mtAdministrator
-            // 
-            this.mtAdministrator.Location = new System.Drawing.Point(156, 3);
-            this.mtAdministrator.Name = "mtAdministrator";
-            this.mtAdministrator.Size = new System.Drawing.Size(147, 149);
-            this.mtAdministrator.Style = MetroFramework.MetroColorStyle.Teal;
-            this.mtAdministrator.TabIndex = 0;
-            this.mtAdministrator.Text = "Administrator";
-            this.mtAdministrator.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtAdministrator.TileImage = global::RED7Studios.FreePOS.Properties.Resources.UserIcon;
-            this.mtAdministrator.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtAdministrator.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.mtAdministrator.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.mtAdministrator.UseTileImage = true;
-            this.mtAdministrator.Click += new System.EventHandler(this.mtAdministrator_Click);
-            // 
-            // mtMakayla
-            // 
-            this.mtMakayla.Location = new System.Drawing.Point(3, 3);
-            this.mtMakayla.Name = "mtMakayla";
-            this.mtMakayla.Size = new System.Drawing.Size(147, 149);
-            this.mtMakayla.Style = MetroFramework.MetroColorStyle.Teal;
-            this.mtMakayla.TabIndex = 2;
-            this.mtMakayla.Text = "Makayla";
-            this.mtMakayla.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mtMakayla.TileImage = global::RED7Studios.FreePOS.Properties.Resources.UserIcon;
-            this.mtMakayla.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtMakayla.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.mtMakayla.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.mtMakayla.UseTileImage = true;
-            this.mtMakayla.Click += new System.EventHandler(this.mtMakayla_Click);
             // 
             // tbUsername
             // 
@@ -110,8 +75,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.mtMakayla, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.mtAdministrator, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(245, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -152,6 +115,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.Size = new System.Drawing.Size(797, 417);
             this.tableLayoutPanel3.TabIndex = 8;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // frmLogin
             // 
@@ -166,13 +130,13 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(32, 39);
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -180,9 +144,6 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTile mtAdministrator;
-        private MetroFramework.Controls.MetroTile mtMakayla;
         private MetroFramework.Controls.MetroTextBox tbUsername;
         private MetroFramework.Controls.MetroTextBox tbPassword;
         private UI.Controls.ModernButton btnLogin;

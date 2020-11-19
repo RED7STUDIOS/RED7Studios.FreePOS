@@ -72,8 +72,8 @@ namespace RED7Studios.FreePOS.FTS
                 {
                     Hide();
 
-                    frmLicense license = new frmLicense();
-                    license.Show();
+                    frmDatabase database = new frmDatabase();
+                    database.Show();
                 }
 
                 table.Clear();

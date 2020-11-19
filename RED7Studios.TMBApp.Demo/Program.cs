@@ -1,8 +1,10 @@
-﻿using System;
+﻿using RED7Studios.FreePOS.FTS;
+using System;
+using System.IO;
 using System.Windows.Forms;
 
 
-namespace RED7Studios.TMBApp
+namespace RED7Studios.FreePOS
 {
     static class Program
     {
@@ -12,12 +14,20 @@ namespace RED7Studios.TMBApp
         [STAThread]
         static void Main()
         {
+            if (!Directory.Exists("Data"))
+            {
+                Directory.CreateDirectory("Data");
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            MessageBox.Show("This program is for demo purposes only. Stuff in this demo is subject to change. Servers may shut down for the demo!", "DEMO APPLICATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            Application.Run(new frmLogin());
+            if (!File.Exists("Data\\connectionString"))
+            {
+                Application.Run(new FTS.frmWelcome());
+            }
+            else
+            {
+                Application.Run(new frmLogin());
+            }
         }
     }
 }

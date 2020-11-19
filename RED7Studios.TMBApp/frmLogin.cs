@@ -2,6 +2,7 @@
 using RED7Studios.UI.Forms;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 // DB INFO:
@@ -14,15 +15,21 @@ namespace RED7Studios.FreePOS
 {
     public partial class frmLogin : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
+        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
 
         MySqlDataAdapter adapter;
 
         DataTable table = new DataTable();
 
+        private Token token;
+
+        private string level;
+
         public frmLogin()
         {
             InitializeComponent();
+
+            token = new Token();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -35,7 +42,7 @@ namespace RED7Studios.FreePOS
         {
             try
             {
-                adapter = new MySqlDataAdapter("SELECT `username`, `password`, `first`, `last` FROM `users` WHERE `username` = '" + tbUsername.Text + "' AND `password` = '" + tbPassword.Text + "'", conn);
+                adapter = new MySqlDataAdapter("SELECT `username`, `password`, `first`, `last`, `level` FROM `users` WHERE `username` = '" + tbUsername.Text + "' AND `password` = '" + tbPassword.Text + "'", conn);
                 adapter.Fill(table);
 
                 DataRow[] currentRows = table.Select(
@@ -52,10 +59,14 @@ namespace RED7Studios.FreePOS
 
                     foreach (DataRow row in currentRows)
                     {
+                        level = row[4].ToString();
+
                         foreach (DataColumn column in table.Columns)
-                            Console.Write("\t{0}", row[column]);
+                            Console.WriteLine("\t{0}", row[column]);
 
                         Console.WriteLine("\t" + row.RowState);
+                        Console.WriteLine("Level is : " + level);
+
                     }
                 }
 
@@ -70,8 +81,10 @@ namespace RED7Studios.FreePOS
                     //MessageBox.Show("Correct");
                     Hide();
 
-                    frmDashboard dash = new frmDashboard();
-                    dash.Show();
+                    string username = tbUsername.Text;
+                    string accessLevel = level;
+
+                    _ = new frmDashboard(username, accessLevel).ShowDialog();
                 }
 
                 table.Clear();
@@ -100,6 +113,11 @@ namespace RED7Studios.FreePOS
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

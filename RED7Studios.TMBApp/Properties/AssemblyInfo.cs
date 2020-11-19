@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("FreePOS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("FreePOS is an alternative to other popular POS systems.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("RED7Studios")]
 [assembly: AssemblyProduct("FreePOS")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Licensed by RED7Studios")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -36,13 +36,7 @@ namespace RED7Studios.FreePOS.FTS
 
         private void frmWelcome_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Z && (e.Control))
-            {
-                Hide();
 
-                frmDatabaseSkipped skipped = new frmDatabaseSkipped();
-                skipped.Show();
-            }
         }
     }
 }

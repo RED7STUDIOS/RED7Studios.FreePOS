@@ -1,21 +1,35 @@
 ﻿using MySql.Data.MySqlClient;
+using RED7Studios.UI.Forms;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
-namespace RED7Studios.TMBApp
+// DB INFO:
+// IP: 52.187.197.110
+// Username : macarons_storeapp
+// Password : Vf7gd5*3
+// Database : macarons_storeapp
+
+namespace RED7Studios.FreePOS
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.233.224; Database=freepos_demo;Uid=freepos_demo;Pwd=oP31v4!w;");
+        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
 
         MySqlDataAdapter adapter;
 
         DataTable table = new DataTable();
 
+        private Token token;
+
+        private string level;
+
         public frmLogin()
         {
             InitializeComponent();
+
+            token = new Token();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -28,7 +42,7 @@ namespace RED7Studios.TMBApp
         {
             try
             {
-                adapter = new MySqlDataAdapter("SELECT `username`, `password`, `first`, `last` FROM `users` WHERE `username` = '" + tbUsername.Text + "' AND `password` = '" + tbPassword.Text + "'", conn);
+                adapter = new MySqlDataAdapter("SELECT `username`, `password`, `first`, `last`, `level` FROM `users` WHERE `username` = '" + tbUsername.Text + "' AND `password` = '" + tbPassword.Text + "'", conn);
                 adapter.Fill(table);
 
                 DataRow[] currentRows = table.Select(
@@ -45,10 +59,14 @@ namespace RED7Studios.TMBApp
 
                     foreach (DataRow row in currentRows)
                     {
+                        level = row[4].ToString();
+
                         foreach (DataColumn column in table.Columns)
-                            Console.Write("\t{0}", row[column]);
+                            Console.WriteLine("\t{0}", row[column]);
 
                         Console.WriteLine("\t" + row.RowState);
+                        Console.WriteLine("Level is : " + level);
+
                     }
                 }
 
@@ -63,8 +81,10 @@ namespace RED7Studios.TMBApp
                     //MessageBox.Show("Correct");
                     Hide();
 
-                    frmDashboard dash = new frmDashboard();
-                    dash.Show();
+                    string username = tbUsername.Text;
+                    string accessLevel = level;
+
+                    _ = new frmDashboard(username, accessLevel).ShowDialog();
                 }
 
                 table.Clear();
@@ -75,16 +95,14 @@ namespace RED7Studios.TMBApp
             }
         }
 
-        private void mtDemo_Click(object sender, EventArgs e)
+        private void mtMakayla_Click(object sender, EventArgs e)
         {
-            tbUsername.Text = "demo";
-            tbPassword.Text = "demo";
+            tbUsername.Text = "makayla";
         }
 
         private void mtAdministrator_Click(object sender, EventArgs e)
         {
             tbUsername.Text = "admin";
-            tbPassword.Text = "password";
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -95,6 +113,23 @@ namespace RED7Studios.TMBApp
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void modernButton1_Click(object sender, EventArgs e)
+        {
+            tbUsername.Text = "employee";
+            tbPassword.Text = "employee";
+        }
+
+        private void modernButton2_Click(object sender, EventArgs e)
+        {
+            tbUsername.Text = "admin";
+            tbPassword.Text = "admin";
         }
     }
 }

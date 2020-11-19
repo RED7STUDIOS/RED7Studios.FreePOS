@@ -5,6 +5,7 @@ using System.Collections;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -14,15 +15,29 @@ using System.Windows.Forms;
 // Password : Vf7gd5*3
 // Database : macarons_storeapp
 
+// Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;
+
 namespace RED7Studios.FreePOS
 {
     public partial class CreateOrder : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
+        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
 
-        public CreateOrder()
+        string _username;
+
+        string _accessLevel;
+
+        private Token token;
+
+
+        public CreateOrder(string s, string a)
         {
             InitializeComponent();
+
+            _username = s;
+            _accessLevel = a;
+
+            token = new Token();
         }
 
         private void CreateOrder_Load(object sender, EventArgs e)
@@ -36,7 +51,7 @@ namespace RED7Studios.FreePOS
             cmb_customers.Items.Clear();
 
             DataTable customertable = new DataTable("customertable");
-            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
+            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {
@@ -54,7 +69,7 @@ namespace RED7Studios.FreePOS
             cmb_items.Items.Clear();
 
             DataTable itemtable = new DataTable("itemtable");
-            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
+            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT name FROM items WHERE name <> 'NULL'", sqlConn))
                 {
@@ -99,7 +114,7 @@ namespace RED7Studios.FreePOS
 
         private void CreateOrder_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmDashboard dash = new frmDashboard();
+            frmDashboard dash = new frmDashboard(_username, _accessLevel);
             dash.Show();
         }
 
@@ -192,7 +207,10 @@ namespace RED7Studios.FreePOS
         {
             Hide();
 
-            CreateOrder thisForm = new CreateOrder();
+            string username = _username;
+            string accessLevel = _accessLevel;
+
+            CreateOrder thisForm = new CreateOrder(username, accessLevel);
             thisForm.Show();
         }
 

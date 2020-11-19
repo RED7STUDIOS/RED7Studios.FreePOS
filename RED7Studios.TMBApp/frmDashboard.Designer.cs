@@ -28,27 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDebug = new System.Windows.Forms.Button();
             this.mtAdminTasks = new MetroFramework.Controls.MetroTile();
             this.mtOrderList = new MetroFramework.Controls.MetroTile();
             this.mtLogout = new MetroFramework.Controls.MetroTile();
             this.mtCreateOrder = new MetroFramework.Controls.MetroTile();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnDebug
-            // 
-            this.btnDebug.Location = new System.Drawing.Point(794, -13);
-            this.btnDebug.Name = "btnDebug";
-            this.btnDebug.Size = new System.Drawing.Size(14, 19);
-            this.btnDebug.TabIndex = 7;
-            this.btnDebug.UseVisualStyleBackColor = true;
-            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
             // mtAdminTasks
             // 
-            this.mtAdminTasks.Location = new System.Drawing.Point(636, 132);
+            this.mtAdminTasks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtAdminTasks.Location = new System.Drawing.Point(814, 155);
             this.mtAdminTasks.Name = "mtAdminTasks";
-            this.mtAdminTasks.Size = new System.Drawing.Size(150, 150);
+            this.mtAdminTasks.Size = new System.Drawing.Size(165, 163);
             this.mtAdminTasks.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtAdminTasks.TabIndex = 6;
             this.mtAdminTasks.Text = "Admin Tasks";
@@ -62,9 +58,10 @@
             // 
             // mtOrderList
             // 
-            this.mtOrderList.Location = new System.Drawing.Point(168, 45);
+            this.mtOrderList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtOrderList.Location = new System.Drawing.Point(159, 3);
             this.mtOrderList.Name = "mtOrderList";
-            this.mtOrderList.Size = new System.Drawing.Size(150, 150);
+            this.mtOrderList.Size = new System.Drawing.Size(159, 146);
             this.mtOrderList.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtOrderList.TabIndex = 5;
             this.mtOrderList.Text = "Order List";
@@ -78,9 +75,10 @@
             // 
             // mtLogout
             // 
-            this.mtLogout.Location = new System.Drawing.Point(636, 288);
+            this.mtLogout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtLogout.Location = new System.Drawing.Point(814, 324);
             this.mtLogout.Name = "mtLogout";
-            this.mtLogout.Size = new System.Drawing.Size(150, 150);
+            this.mtLogout.Size = new System.Drawing.Size(165, 157);
             this.mtLogout.Style = MetroFramework.MetroColorStyle.Red;
             this.mtLogout.TabIndex = 4;
             this.mtLogout.Text = "Log Out";
@@ -94,9 +92,10 @@
             // 
             // mtCreateOrder
             // 
-            this.mtCreateOrder.Location = new System.Drawing.Point(12, 45);
+            this.mtCreateOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtCreateOrder.Location = new System.Drawing.Point(3, 3);
             this.mtCreateOrder.Name = "mtCreateOrder";
-            this.mtCreateOrder.Size = new System.Drawing.Size(150, 150);
+            this.mtCreateOrder.Size = new System.Drawing.Size(150, 146);
             this.mtCreateOrder.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtCreateOrder.TabIndex = 3;
             this.mtCreateOrder.Text = "Create Order";
@@ -108,20 +107,84 @@
             this.mtCreateOrder.UseTileImage = true;
             this.mtCreateOrder.Click += new System.EventHandler(this.mtCreateOrder_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 34);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 34);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 34);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.71795F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.28205F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.mtOrderList, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.mtCreateOrder, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.mtAdminTasks, 5, 1);
+            this.tableLayoutPanel4.Controls.Add(this.mtLogout, 5, 2);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 33);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.38462F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.61538F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(982, 484);
+            this.tableLayoutPanel4.TabIndex = 7;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ClientSize = new System.Drawing.Size(984, 518);
             this.ColorScheme.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(64)))), ((int)(((byte)(101)))));
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.Controls.Add(this.btnDebug);
-            this.Controls.Add(this.mtAdminTasks);
-            this.Controls.Add(this.mtOrderList);
-            this.Controls.Add(this.mtLogout);
-            this.Controls.Add(this.mtCreateOrder);
+            this.Controls.Add(this.tableLayoutPanel4);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -131,6 +194,7 @@
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDashboard_FormClosing);
             this.Load += new System.EventHandler(this.frmDashboard_Load);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -141,6 +205,9 @@
         private MetroFramework.Controls.MetroTile mtLogout;
         private MetroFramework.Controls.MetroTile mtOrderList;
         private MetroFramework.Controls.MetroTile mtAdminTasks;
-        private System.Windows.Forms.Button btnDebug;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
     }
 }

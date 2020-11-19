@@ -2,22 +2,35 @@
 using RED7Studios.UI.Forms;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 namespace RED7Studios.FreePOS
 {
     public partial class OrderList : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;");
-        public OrderList()
+        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+
+        string _username;
+
+        string _accessLevel;
+
+        private Token token;
+
+        public OrderList(string s, string a)
         {
             InitializeComponent();
+
+            _username = s;
+            _accessLevel = a;
+
+            token = new Token();
         }
 
         public void ListCat()
         {
             DataTable linkcat = new DataTable("linkcat");
-            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.197.110; Database=macarons_storeapp;Uid=macarons_storeapp;Pwd=Vf7gd5*3;"))
+            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {
@@ -61,7 +74,7 @@ namespace RED7Studios.FreePOS
 
         private void OrderList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmDashboard dash = new frmDashboard();
+            frmDashboard dash = new frmDashboard(_username, _accessLevel);
             dash.Show();
         }
 

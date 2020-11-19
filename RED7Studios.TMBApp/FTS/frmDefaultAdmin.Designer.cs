@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.lbPass = new System.Windows.Forms.Label();
+            this.tbPass = new System.Windows.Forms.TextBox();
             this.modernButton2 = new RED7Studios.UI.Controls.ModernButton();
             this.btnNext = new RED7Studios.UI.Controls.ModernButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.lbLast = new System.Windows.Forms.Label();
+            this.tbLast = new System.Windows.Forms.TextBox();
+            this.lbFirst = new System.Windows.Forms.Label();
+            this.tbFirst = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label4
+            // lbPass
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label4.Location = new System.Drawing.Point(14, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 28);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Password:";
+            this.lbPass.AutoSize = true;
+            this.lbPass.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbPass.Location = new System.Drawing.Point(14, 252);
+            this.lbPass.Name = "lbPass";
+            this.lbPass.Size = new System.Drawing.Size(97, 28);
+            this.lbPass.TabIndex = 30;
+            this.lbPass.Text = "Password:";
             // 
-            // tbPassword
+            // tbPass
             // 
-            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.tbPassword.Location = new System.Drawing.Point(125, 285);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(325, 30);
-            this.tbPassword.TabIndex = 29;
+            this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbPass.Location = new System.Drawing.Point(125, 252);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.Size = new System.Drawing.Size(325, 30);
+            this.tbPass.TabIndex = 29;
             // 
             // modernButton2
             // 
@@ -63,6 +69,7 @@
             this.modernButton2.TabIndex = 22;
             this.modernButton2.Text = "Back";
             this.modernButton2.UseVisualStyleBackColor = true;
+            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // btnNext
             // 
@@ -74,6 +81,7 @@
             this.btnNext.TabIndex = 21;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // label2
             // 
@@ -81,9 +89,63 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
             this.label2.Location = new System.Drawing.Point(13, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(412, 108);
+            this.label2.Size = new System.Drawing.Size(635, 36);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Please enter your database details.\r\n\r\n(MYSQL IS ONLY SUPPORTED)";
+            this.label2.Text = "Please enter details to create a default admin account.";
+            // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbUser.Location = new System.Drawing.Point(14, 216);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(103, 28);
+            this.lbUser.TabIndex = 32;
+            this.lbUser.Text = "Username:";
+            // 
+            // tbUser
+            // 
+            this.tbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbUser.Location = new System.Drawing.Point(125, 216);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(325, 30);
+            this.tbUser.TabIndex = 31;
+            // 
+            // lbLast
+            // 
+            this.lbLast.AutoSize = true;
+            this.lbLast.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbLast.Location = new System.Drawing.Point(14, 180);
+            this.lbLast.Name = "lbLast";
+            this.lbLast.Size = new System.Drawing.Size(107, 28);
+            this.lbLast.TabIndex = 34;
+            this.lbLast.Text = "Last Name:";
+            // 
+            // tbLast
+            // 
+            this.tbLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbLast.Location = new System.Drawing.Point(125, 180);
+            this.tbLast.Name = "tbLast";
+            this.tbLast.Size = new System.Drawing.Size(325, 30);
+            this.tbLast.TabIndex = 33;
+            // 
+            // lbFirst
+            // 
+            this.lbFirst.AutoSize = true;
+            this.lbFirst.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbFirst.Location = new System.Drawing.Point(14, 144);
+            this.lbFirst.Name = "lbFirst";
+            this.lbFirst.Size = new System.Drawing.Size(110, 28);
+            this.lbFirst.TabIndex = 36;
+            this.lbFirst.Text = "First Name:";
+            // 
+            // tbFirst
+            // 
+            this.tbFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.tbFirst.Location = new System.Drawing.Point(125, 144);
+            this.tbFirst.Name = "tbFirst";
+            this.tbFirst.Size = new System.Drawing.Size(325, 30);
+            this.tbFirst.TabIndex = 35;
             // 
             // frmDefaultAdmin
             // 
@@ -94,14 +156,20 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.lbFirst);
+            this.Controls.Add(this.tbFirst);
+            this.Controls.Add(this.lbLast);
+            this.Controls.Add(this.tbLast);
+            this.Controls.Add(this.lbUser);
+            this.Controls.Add(this.tbUser);
+            this.Controls.Add(this.lbPass);
+            this.Controls.Add(this.tbPass);
             this.Controls.Add(this.modernButton2);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.label2);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmDefaultAdmin";
-            this.Text = "frmDefaultAdmin";
+            this.Text = "Create Default Admin";
             this.Load += new System.EventHandler(this.frmDefaultAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,10 +178,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Label lbPass;
+        private System.Windows.Forms.TextBox tbPass;
         private UI.Controls.ModernButton modernButton2;
         private UI.Controls.ModernButton btnNext;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.Label lbLast;
+        private System.Windows.Forms.TextBox tbLast;
+        private System.Windows.Forms.Label lbFirst;
+        private System.Windows.Forms.TextBox tbFirst;
     }
 }

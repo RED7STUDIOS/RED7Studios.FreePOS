@@ -1,9 +1,10 @@
-﻿using System;
+﻿using RED7Studios.UI.Forms;
+using System;
 using System.Windows.Forms;
 
-namespace RED7Studios.TMBApp.FTS
+namespace RED7Studios.FreePOS.FTS
 {
-    public partial class frmWelcome : Form
+    public partial class frmWelcome : ModernForm
     {
         public frmWelcome()
         {
@@ -13,6 +14,29 @@ namespace RED7Studios.TMBApp.FTS
         private void modernButton2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Hide();
+
+            frmLicense license = new frmLicense();
+            license.Show();
+        }
+
+        private void frmWelcome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmWelcome_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void frmWelcome_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

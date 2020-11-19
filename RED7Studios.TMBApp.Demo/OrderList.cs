@@ -1,22 +1,36 @@
 ﻿using MySql.Data.MySqlClient;
+using RED7Studios.UI.Forms;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
-namespace RED7Studios.TMBApp
+namespace RED7Studios.FreePOS
 {
-    public partial class OrderList : Form
+    public partial class OrderList : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection("Server = 52.187.233.224; Database=freepos_demo;Uid=freepos_demo;Pwd=oP31v4!w;");
-        public OrderList()
+        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+
+        string _username;
+
+        string _accessLevel;
+
+        private Token token;
+
+        public OrderList(string s, string a)
         {
             InitializeComponent();
+
+            _username = s;
+            _accessLevel = a;
+
+            token = new Token();
         }
 
         public void ListCat()
         {
             DataTable linkcat = new DataTable("linkcat");
-            using (MySqlConnection sqlConn = new MySqlConnection(@"Server = 52.187.233.224; Database=freepos_demo;Uid=freepos_demo;Pwd=oP31v4!w;"))
+            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {
@@ -60,8 +74,13 @@ namespace RED7Studios.TMBApp
 
         private void OrderList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmDashboard dash = new frmDashboard();
+            frmDashboard dash = new frmDashboard(_username, _accessLevel);
             dash.Show();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

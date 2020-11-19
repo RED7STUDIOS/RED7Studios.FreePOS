@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RED7Studios.FreePOS", "RED7Studios.TMBApp\RED7Studios.FreePOS.csproj", "{86516082-6F79-4DD6-9921-79FAD6B10247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RED7Studios.TMBApp.Demo", "RED7Studios.TMBApp.Demo\RED7Studios.TMBApp.Demo.csproj", "{0032FEC1-75F2-447B-BE7B-E5CAC1E53408}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RED7Studios.FreePOS.Demo", "RED7Studios.TMBApp.Demo\RED7Studios.FreePOS.Demo.csproj", "{31AAB40B-6EA1-4FD8-9AD4-BDE4C774E023}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{86516082-6F79-4DD6-9921-79FAD6B10247}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86516082-6F79-4DD6-9921-79FAD6B10247}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86516082-6F79-4DD6-9921-79FAD6B10247}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0032FEC1-75F2-447B-BE7B-E5CAC1E53408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0032FEC1-75F2-447B-BE7B-E5CAC1E53408}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0032FEC1-75F2-447B-BE7B-E5CAC1E53408}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0032FEC1-75F2-447B-BE7B-E5CAC1E53408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AAB40B-6EA1-4FD8-9AD4-BDE4C774E023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AAB40B-6EA1-4FD8-9AD4-BDE4C774E023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AAB40B-6EA1-4FD8-9AD4-BDE4C774E023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AAB40B-6EA1-4FD8-9AD4-BDE4C774E023}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

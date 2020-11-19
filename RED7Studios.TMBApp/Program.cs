@@ -1,5 +1,6 @@
 ﻿using RED7Studios.FreePOS.FTS;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 
@@ -13,9 +14,20 @@ namespace RED7Studios.FreePOS
         [STAThread]
         static void Main()
         {
+            if (!Directory.Exists("Data"))
+            {
+                Directory.CreateDirectory("Data");
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            if (!File.Exists("Data\\connectionString"))
+            {
+                Application.Run(new FTS.frmWelcome());
+            }
+            else
+            {
+                Application.Run(new frmLogin());
+            }
         }
     }
 }

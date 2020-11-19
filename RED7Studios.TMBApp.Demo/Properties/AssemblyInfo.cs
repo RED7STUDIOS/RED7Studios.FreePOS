@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RED7Studios.TMBApp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("FreePOS")]
+[assembly: AssemblyDescription("FreePOS is an alternative to other popular POS systems.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RED7Studios.TMBApp")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("RED7Studios")]
+[assembly: AssemblyProduct("FreePOS")]
+[assembly: AssemblyCopyright("Licensed by RED7Studios")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

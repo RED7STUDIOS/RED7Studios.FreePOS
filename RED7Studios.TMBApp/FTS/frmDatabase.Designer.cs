@@ -59,6 +59,7 @@
             this.modernButton2.TabIndex = 11;
             this.modernButton2.Text = "Back";
             this.modernButton2.UseVisualStyleBackColor = true;
+            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // btnNext
             // 
@@ -70,6 +71,7 @@
             this.btnNext.TabIndex = 10;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // label2
             // 
