@@ -59,7 +59,7 @@
             this.lvList.HideSelection = false;
             this.lvList.Location = new System.Drawing.Point(13, 75);
             this.lvList.Name = "lvList";
-            this.lvList.Size = new System.Drawing.Size(776, 363);
+            this.lvList.Size = new System.Drawing.Size(958, 430);
             this.lvList.TabIndex = 35;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ClientSize = new System.Drawing.Size(984, 518);
             this.ColorScheme.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(64)))), ((int)(((byte)(101)))));
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));

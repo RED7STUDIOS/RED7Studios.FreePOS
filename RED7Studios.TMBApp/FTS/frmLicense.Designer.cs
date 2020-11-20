@@ -38,7 +38,7 @@
             // 
             this.btnBack.CustomColorScheme = false;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.btnBack.Location = new System.Drawing.Point(556, 368);
+            this.btnBack.Location = new System.Drawing.Point(741, 435);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(230, 70);
             this.btnBack.TabIndex = 7;
@@ -50,7 +50,7 @@
             // 
             this.btnNext.CustomColorScheme = false;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.btnNext.Location = new System.Drawing.Point(11, 368);
+            this.btnNext.Location = new System.Drawing.Point(13, 435);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(230, 70);
             this.btnNext.TabIndex = 6;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ClientSize = new System.Drawing.Size(984, 518);
             this.ColorScheme.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(64)))), ((int)(((byte)(101)))));
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));

@@ -39,6 +39,7 @@
             this.tbLast = new System.Windows.Forms.TextBox();
             this.lbFirst = new System.Windows.Forms.Label();
             this.tbFirst = new System.Windows.Forms.TextBox();
+            this.modernButton1 = new RED7Studios.UI.Controls.ModernButton();
             this.SuspendLayout();
             // 
             // lbPass
@@ -63,7 +64,7 @@
             // 
             this.btnBack.CustomColorScheme = false;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.btnBack.Location = new System.Drawing.Point(557, 368);
+            this.btnBack.Location = new System.Drawing.Point(741, 435);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(230, 70);
             this.btnBack.TabIndex = 22;
@@ -147,11 +148,23 @@
             this.tbFirst.Size = new System.Drawing.Size(325, 30);
             this.tbFirst.TabIndex = 35;
             // 
+            // modernButton1
+            // 
+            this.modernButton1.CustomColorScheme = false;
+            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 18.25F);
+            this.modernButton1.Location = new System.Drawing.Point(13, 435);
+            this.modernButton1.Name = "modernButton1";
+            this.modernButton1.Size = new System.Drawing.Size(230, 70);
+            this.modernButton1.TabIndex = 21;
+            this.modernButton1.Text = "Next";
+            this.modernButton1.UseVisualStyleBackColor = true;
+            this.modernButton1.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // frmDefaultAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ClientSize = new System.Drawing.Size(984, 518);
             this.ColorScheme.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(64)))), ((int)(((byte)(101)))));
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
@@ -165,6 +178,7 @@
             this.Controls.Add(this.lbPass);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.modernButton1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lbComment);
             this.Location = new System.Drawing.Point(0, 0);
@@ -188,5 +202,6 @@
         private System.Windows.Forms.TextBox tbLast;
         private System.Windows.Forms.Label lbFirst;
         private System.Windows.Forms.TextBox tbFirst;
+        private UI.Controls.ModernButton modernButton1;
     }
 }
