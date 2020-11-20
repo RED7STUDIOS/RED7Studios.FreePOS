@@ -15,50 +15,59 @@ namespace RED7Studios.FreePOS.FTS
 {
     public partial class frmDefaultAdmin : ModernForm
     {
+        // Create a new mysql connection called 'conn' and read the connection string.
         MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
 
         public frmDefaultAdmin()
         {
+            // Initialize the form.
             InitializeComponent();
-        }
-
-        private void frmDefaultAdmin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             try
             {
+                // Create a new string called 'query' with the query details.
                 string Query = "Insert into users (id, username, password, first, last, level) values " +
                "('" + "1" + "', '" + tbUser.Text + "', '" + tbPass.Text + "', '" + tbFirst.Text + "', '" + tbLast.Text + "', '" + "admin" + "')";
 
-                //This is  MySqlConnection here i have created the object and pass my connection string.  
-                //This is command class which will handle the query and connection object.  
+                // Create a new MySql command with the query and connection called 'command'.
                 MySqlCommand command = new MySqlCommand(Query, conn);
+                // Create a new mysql data reader called 'reader'.
                 MySqlDataReader reader;
+                // Open the connection.
                 conn.Open();
-                reader = command.ExecuteReader();     // Here our query will be executed and data saved into the database.  
+                // Set the reader to the command executed.
+                reader = command.ExecuteReader();
+                // Show a message box.
                 MessageBox.Show("Successfully made an admin account!", "SYSTEM");
+                // Close the connection
                 conn.Close();
 
-                Hide(); 
+                // Hide this form.
+                Hide();
 
+                // Create a new frmOptional called 'optional'.
                 frmOptional optional = new frmOptional();
+                // Show the 'optional' form.
                 optional.Show();
             }
             catch (Exception ex)
             {
+                // Show a message box.
                 MessageBox.Show("An error occured: " + ex.Message, "CRITICAL ERROR!");
             }
         }
 
         private void modernButton2_Click(object sender, EventArgs e)
         {
+            // Hide this form.
             Hide();
 
+            // Create a new frmDatabase called 'database'.
             frmDatabase database = new frmDatabase();
+            // Show the 'database' form.
             database.Show();  
         }
     }

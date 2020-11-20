@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.tbHostname = new System.Windows.Forms.TextBox();
-            this.modernButton2 = new RED7Studios.UI.Controls.ModernButton();
+            this.btnBack = new RED7Studios.UI.Controls.ModernButton();
             this.btnNext = new RED7Studios.UI.Controls.ModernButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbComment = new System.Windows.Forms.Label();
+            this.lbHostname = new System.Windows.Forms.Label();
+            this.lbDatabase = new System.Windows.Forms.Label();
             this.tbDatabase = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbPassword = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbUsername = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -49,17 +49,17 @@
             this.tbHostname.Size = new System.Drawing.Size(325, 30);
             this.tbHostname.TabIndex = 12;
             // 
-            // modernButton2
+            // btnBack
             // 
-            this.modernButton2.CustomColorScheme = false;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton2.Location = new System.Drawing.Point(556, 368);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(230, 70);
-            this.modernButton2.TabIndex = 11;
-            this.modernButton2.Text = "Back";
-            this.modernButton2.UseVisualStyleBackColor = true;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            this.btnBack.CustomColorScheme = false;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18.25F);
+            this.btnBack.Location = new System.Drawing.Point(556, 368);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(230, 70);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // btnNext
             // 
@@ -73,35 +73,35 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label2
+            // lbComment
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(412, 108);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Please enter your database details.\r\n\r\n(MYSQL IS ONLY SUPPORTED)";
+            this.lbComment.AutoSize = true;
+            this.lbComment.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.lbComment.Location = new System.Drawing.Point(12, 42);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(412, 108);
+            this.lbComment.TabIndex = 9;
+            this.lbComment.Text = "Please enter your database details.\r\n\r\n(MYSQL IS ONLY SUPPORTED)";
             // 
-            // label1
+            // lbHostname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label1.Location = new System.Drawing.Point(13, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 28);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Hostname:";
+            this.lbHostname.AutoSize = true;
+            this.lbHostname.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbHostname.Location = new System.Drawing.Point(13, 177);
+            this.lbHostname.Name = "lbHostname";
+            this.lbHostname.Size = new System.Drawing.Size(105, 28);
+            this.lbHostname.TabIndex = 13;
+            this.lbHostname.Text = "Hostname:";
             // 
-            // label3
+            // lbDatabase
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label3.Location = new System.Drawing.Point(13, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 28);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Database:";
+            this.lbDatabase.AutoSize = true;
+            this.lbDatabase.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbDatabase.Location = new System.Drawing.Point(13, 213);
+            this.lbDatabase.Name = "lbDatabase";
+            this.lbDatabase.Size = new System.Drawing.Size(97, 28);
+            this.lbDatabase.TabIndex = 15;
+            this.lbDatabase.Text = "Database:";
             // 
             // tbDatabase
             // 
@@ -111,15 +111,15 @@
             this.tbDatabase.Size = new System.Drawing.Size(325, 30);
             this.tbDatabase.TabIndex = 14;
             // 
-            // label4
+            // lbPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label4.Location = new System.Drawing.Point(13, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 28);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Password:";
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbPassword.Location = new System.Drawing.Point(13, 285);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(97, 28);
+            this.lbPassword.TabIndex = 19;
+            this.lbPassword.Text = "Password:";
             // 
             // tbPassword
             // 
@@ -129,15 +129,15 @@
             this.tbPassword.Size = new System.Drawing.Size(325, 30);
             this.tbPassword.TabIndex = 18;
             // 
-            // label5
+            // lbUsername
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label5.Location = new System.Drawing.Point(13, 249);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 28);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Username:";
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.lbUsername.Location = new System.Drawing.Point(13, 249);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(103, 28);
+            this.lbUsername.TabIndex = 17;
+            this.lbUsername.Text = "Username:";
             // 
             // tbUsername
             // 
@@ -156,21 +156,20 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.tbUsername);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbDatabase);
             this.Controls.Add(this.tbDatabase);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbHostname);
             this.Controls.Add(this.tbHostname);
-            this.Controls.Add(this.modernButton2);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbComment);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmDatabase";
             this.Text = "Database";
-            this.Load += new System.EventHandler(this.frmDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,15 +178,15 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbHostname;
-        private UI.Controls.ModernButton modernButton2;
+        private UI.Controls.ModernButton btnBack;
         private UI.Controls.ModernButton btnNext;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbComment;
+        private System.Windows.Forms.Label lbHostname;
+        private System.Windows.Forms.Label lbDatabase;
         private System.Windows.Forms.TextBox tbDatabase;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.TextBox tbUsername;
     }
 }

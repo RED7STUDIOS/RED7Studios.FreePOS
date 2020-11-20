@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.modernButton2 = new RED7Studios.UI.Controls.ModernButton();
+            this.btnBack = new RED7Studios.UI.Controls.ModernButton();
             this.btnNext = new RED7Studios.UI.Controls.ModernButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbComment = new System.Windows.Forms.Label();
             this.tbLicense = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // modernButton2
+            // btnBack
             // 
-            this.modernButton2.CustomColorScheme = false;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton2.Location = new System.Drawing.Point(556, 368);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(230, 70);
-            this.modernButton2.TabIndex = 7;
-            this.modernButton2.Text = "Back";
-            this.modernButton2.UseVisualStyleBackColor = true;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            this.btnBack.CustomColorScheme = false;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18.25F);
+            this.btnBack.Location = new System.Drawing.Point(556, 368);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(230, 70);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // btnNext
             // 
@@ -58,17 +58,16 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label2
+            // lbComment
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label2.Location = new System.Drawing.Point(12, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(716, 144);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "To continue you must enter the license key you have bought.\r\n\r\nKeys look like thi" +
+            this.lbComment.AutoSize = true;
+            this.lbComment.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.lbComment.Location = new System.Drawing.Point(12, 53);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(716, 144);
+            this.lbComment.TabIndex = 5;
+            this.lbComment.Text = "To continue you must enter the license key you have bought.\r\n\r\nKeys look like thi" +
     "s:\r\n12345-ABCDE-F6789";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbLicense
             // 
@@ -88,9 +87,9 @@
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
             this.Controls.Add(this.tbLicense);
-            this.Controls.Add(this.modernButton2);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbComment);
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -98,7 +97,6 @@
             this.Name = "frmLicense";
             this.ShowIcon = false;
             this.Text = "License";
-            this.Load += new System.EventHandler(this.frmLicense_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,9 +104,9 @@
 
         #endregion
 
-        private UI.Controls.ModernButton modernButton2;
+        private UI.Controls.ModernButton btnBack;
         private UI.Controls.ModernButton btnNext;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbComment;
         private System.Windows.Forms.TextBox tbLicense;
     }
 }

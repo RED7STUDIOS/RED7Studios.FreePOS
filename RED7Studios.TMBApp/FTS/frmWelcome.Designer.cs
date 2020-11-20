@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbComment = new System.Windows.Forms.Label();
             this.btnNext = new RED7Studios.UI.Controls.ModernButton();
-            this.modernButton2 = new RED7Studios.UI.Controls.ModernButton();
+            this.btnCancel = new RED7Studios.UI.Controls.ModernButton();
             this.SuspendLayout();
             // 
-            // label2
+            // lbComment
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label2.Location = new System.Drawing.Point(12, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(732, 288);
-            this.label2.TabIndex = 1;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.lbComment.AutoSize = true;
+            this.lbComment.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.lbComment.Location = new System.Drawing.Point(12, 49);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(732, 288);
+            this.lbComment.TabIndex = 1;
+            this.lbComment.Text = resources.GetString("lbComment.Text");
             // 
             // btnNext
             // 
@@ -56,17 +56,17 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // modernButton2
+            // btnCancel
             // 
-            this.modernButton2.CustomColorScheme = false;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton2.Location = new System.Drawing.Point(556, 368);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(230, 70);
-            this.modernButton2.TabIndex = 3;
-            this.modernButton2.Text = "Cancel";
-            this.modernButton2.UseVisualStyleBackColor = true;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            this.btnCancel.CustomColorScheme = false;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 18.25F);
+            this.btnCancel.Location = new System.Drawing.Point(556, 368);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(230, 70);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // frmWelcome
             // 
@@ -77,9 +77,9 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.Controls.Add(this.modernButton2);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbComment);
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
@@ -88,17 +88,14 @@
             this.Name = "frmWelcome";
             this.ShowIcon = false;
             this.Text = "Welcome";
-            this.Load += new System.EventHandler(this.frmWelcome_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmWelcome_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmWelcome_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbComment;
         private UI.Controls.ModernButton btnNext;
-        private UI.Controls.ModernButton modernButton2;
+        private UI.Controls.ModernButton btnCancel;
     }
 }

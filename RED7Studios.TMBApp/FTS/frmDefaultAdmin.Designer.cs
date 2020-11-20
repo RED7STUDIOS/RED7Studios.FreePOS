@@ -30,9 +30,9 @@
         {
             this.lbPass = new System.Windows.Forms.Label();
             this.tbPass = new System.Windows.Forms.TextBox();
-            this.modernButton2 = new RED7Studios.UI.Controls.ModernButton();
+            this.btnBack = new RED7Studios.UI.Controls.ModernButton();
             this.btnNext = new RED7Studios.UI.Controls.ModernButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbComment = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.lbLast = new System.Windows.Forms.Label();
@@ -59,17 +59,17 @@
             this.tbPass.Size = new System.Drawing.Size(325, 30);
             this.tbPass.TabIndex = 29;
             // 
-            // modernButton2
+            // btnBack
             // 
-            this.modernButton2.CustomColorScheme = false;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton2.Location = new System.Drawing.Point(557, 368);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(230, 70);
-            this.modernButton2.TabIndex = 22;
-            this.modernButton2.Text = "Back";
-            this.modernButton2.UseVisualStyleBackColor = true;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            this.btnBack.CustomColorScheme = false;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18.25F);
+            this.btnBack.Location = new System.Drawing.Point(557, 368);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(230, 70);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // btnNext
             // 
@@ -83,15 +83,15 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label2
+            // lbComment
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label2.Location = new System.Drawing.Point(13, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(635, 36);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Please enter details to create a default admin account.";
+            this.lbComment.AutoSize = true;
+            this.lbComment.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.lbComment.Location = new System.Drawing.Point(13, 42);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(635, 36);
+            this.lbComment.TabIndex = 20;
+            this.lbComment.Text = "Please enter details to create a default admin account.";
             // 
             // lbUser
             // 
@@ -164,13 +164,12 @@
             this.Controls.Add(this.tbUser);
             this.Controls.Add(this.lbPass);
             this.Controls.Add(this.tbPass);
-            this.Controls.Add(this.modernButton2);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbComment);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmDefaultAdmin";
             this.Text = "Create Default Admin";
-            this.Load += new System.EventHandler(this.frmDefaultAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,9 +179,9 @@
 
         private System.Windows.Forms.Label lbPass;
         private System.Windows.Forms.TextBox tbPass;
-        private UI.Controls.ModernButton modernButton2;
+        private UI.Controls.ModernButton btnBack;
         private UI.Controls.ModernButton btnNext;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbComment;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.Label lbLast;

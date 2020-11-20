@@ -8,35 +8,25 @@ namespace RED7Studios.FreePOS.FTS
     {
         public frmWelcome()
         {
+            // Initialize form.
             InitializeComponent();
         }
 
         private void modernButton2_Click(object sender, EventArgs e)
         {
+            // Quit the program.
             Application.Exit();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            // Hide this form.
             Hide();
 
+            // Create a new frmLicense called 'license'.
             frmLicense license = new frmLicense();
+            // Show the 'license' form.
             license.Show();
-        }
-
-        private void frmWelcome_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmWelcome_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void frmWelcome_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
     }
 }

@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.modernButton2 = new RED7Studios.UI.Controls.ModernButton();
+            this.btnBack = new RED7Studios.UI.Controls.ModernButton();
             this.btnNext = new RED7Studios.UI.Controls.ModernButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbComment = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // modernButton2
+            // btnBack
             // 
-            this.modernButton2.CustomColorScheme = false;
-            this.modernButton2.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton2.Location = new System.Drawing.Point(556, 368);
-            this.modernButton2.Name = "modernButton2";
-            this.modernButton2.Size = new System.Drawing.Size(230, 70);
-            this.modernButton2.TabIndex = 11;
-            this.modernButton2.Text = "Back";
-            this.modernButton2.UseVisualStyleBackColor = true;
-            this.modernButton2.Click += new System.EventHandler(this.modernButton2_Click);
+            this.btnBack.CustomColorScheme = false;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 18.25F);
+            this.btnBack.Location = new System.Drawing.Point(556, 368);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(230, 70);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.modernButton2_Click);
             // 
             // btnNext
             // 
@@ -57,15 +57,15 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label2
+            // lbComment
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 36);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Optional Settings:";
+            this.lbComment.AutoSize = true;
+            this.lbComment.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.lbComment.Location = new System.Drawing.Point(12, 42);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(220, 36);
+            this.lbComment.TabIndex = 9;
+            this.lbComment.Text = "Optional Settings:";
             // 
             // frmOptional
             // 
@@ -76,21 +76,20 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.Controls.Add(this.modernButton2);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbComment);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmOptional";
             this.Text = "Optional";
-            this.Load += new System.EventHandler(this.frmDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private UI.Controls.ModernButton modernButton2;
+        private UI.Controls.ModernButton btnBack;
         private UI.Controls.ModernButton btnNext;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbComment;
     }
 }

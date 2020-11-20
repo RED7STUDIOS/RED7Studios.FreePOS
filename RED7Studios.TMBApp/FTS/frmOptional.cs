@@ -19,22 +19,22 @@ namespace RED7Studios.FreePOS.FTS
             InitializeComponent();
         }
 
-        private void frmDatabase_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNext_Click(object sender, EventArgs e)
         {
+            // Show a message box.
             MessageBox.Show("Completed setup, the application will now restart!", "SYSTEM");
+            // Restart the application.
             Application.Restart();
         }
 
         private void modernButton2_Click(object sender, EventArgs e)
         {
+            // Hide this form.
             Hide();
 
+            // Create a new frmDefaultAdmin called 'admin'.
             frmDefaultAdmin admin = new frmDefaultAdmin();
+            // Show the 'admin' form.
             admin.Show();
         }
     }

@@ -28,29 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateOrder));
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_discount = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_sub = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lbDiscount = new System.Windows.Forms.Label();
+            this.tbDiscount = new System.Windows.Forms.TextBox();
+            this.lbSubTotal = new System.Windows.Forms.Label();
+            this.tbSubTotal = new System.Windows.Forms.TextBox();
+            this.lvItems = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_total = new System.Windows.Forms.TextBox();
-            this.txt_qty = new System.Windows.Forms.TextBox();
-            this.txt_price = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmb_customers = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmb_items = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.lbQty = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.tbQty = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.lbCustomer = new System.Windows.Forms.Label();
+            this.cmbCustomers = new System.Windows.Forms.ComboBox();
+            this.lbSelectItem = new System.Windows.Forms.Label();
+            this.cmbItems = new System.Windows.Forms.ComboBox();
+            this.lbFullTotal = new System.Windows.Forms.Label();
+            this.tbFullTotal = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
@@ -60,67 +59,66 @@
             this.btnRefresh = new RED7Studios.UI.Controls.ModernButton();
             this.btnAddItem = new RED7Studios.UI.Controls.ModernButton();
             this.btnRemoveItem = new RED7Studios.UI.Controls.ModernButton();
-            this.ScreenCapture = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // label6
+            // lbDiscount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(176, 366);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 17);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Discount";
+            this.lbDiscount.AutoSize = true;
+            this.lbDiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbDiscount.Location = new System.Drawing.Point(176, 366);
+            this.lbDiscount.Name = "lbDiscount";
+            this.lbDiscount.Size = new System.Drawing.Size(63, 17);
+            this.lbDiscount.TabIndex = 38;
+            this.lbDiscount.Text = "Discount";
             // 
-            // txt_discount
+            // tbDiscount
             // 
-            this.txt_discount.Location = new System.Drawing.Point(243, 363);
-            this.txt_discount.Name = "txt_discount";
-            this.txt_discount.Size = new System.Drawing.Size(90, 23);
-            this.txt_discount.TabIndex = 37;
-            this.txt_discount.Text = "0";
-            this.txt_discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_discount.TextChanged += new System.EventHandler(this.txt_discount_TextChanged);
+            this.tbDiscount.Location = new System.Drawing.Point(243, 363);
+            this.tbDiscount.Name = "tbDiscount";
+            this.tbDiscount.Size = new System.Drawing.Size(90, 23);
+            this.tbDiscount.TabIndex = 37;
+            this.tbDiscount.Text = "0";
+            this.tbDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDiscount.TextChanged += new System.EventHandler(this.txt_discount_TextChanged);
             // 
-            // label5
+            // lbSubTotal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(12, 366);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 17);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Sub Total";
+            this.lbSubTotal.AutoSize = true;
+            this.lbSubTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbSubTotal.Location = new System.Drawing.Point(12, 366);
+            this.lbSubTotal.Name = "lbSubTotal";
+            this.lbSubTotal.Size = new System.Drawing.Size(66, 17);
+            this.lbSubTotal.TabIndex = 36;
+            this.lbSubTotal.Text = "Sub Total";
             // 
-            // txt_sub
+            // tbSubTotal
             // 
-            this.txt_sub.Location = new System.Drawing.Point(81, 363);
-            this.txt_sub.Name = "txt_sub";
-            this.txt_sub.ReadOnly = true;
-            this.txt_sub.Size = new System.Drawing.Size(86, 23);
-            this.txt_sub.TabIndex = 35;
-            this.txt_sub.Text = "0";
-            this.txt_sub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_sub.TextChanged += new System.EventHandler(this.txt_sub_TextChanged);
+            this.tbSubTotal.Location = new System.Drawing.Point(81, 363);
+            this.tbSubTotal.Name = "tbSubTotal";
+            this.tbSubTotal.ReadOnly = true;
+            this.tbSubTotal.Size = new System.Drawing.Size(86, 23);
+            this.tbSubTotal.TabIndex = 35;
+            this.tbSubTotal.Text = "0";
+            this.tbSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSubTotal.TextChanged += new System.EventHandler(this.txt_sub_TextChanged);
             // 
-            // listView1
+            // lvItems
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(13, 188);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(466, 160);
-            this.listView1.TabIndex = 34;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvItems.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.lvItems.FullRowSelect = true;
+            this.lvItems.GridLines = true;
+            this.lvItems.HideSelection = false;
+            this.lvItems.Location = new System.Drawing.Point(13, 188);
+            this.lvItems.Name = "lvItems";
+            this.lvItems.Size = new System.Drawing.Size(466, 160);
+            this.lvItems.TabIndex = 34;
+            this.lvItems.UseCompatibleStateImageBehavior = false;
+            this.lvItems.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -142,127 +140,127 @@
             this.columnHeader4.Text = "Total";
             this.columnHeader4.Width = 80;
             // 
-            // label4
+            // lbTotal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(296, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Total";
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbTotal.Location = new System.Drawing.Point(296, 113);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(39, 17);
+            this.lbTotal.TabIndex = 32;
+            this.lbTotal.Text = "Total";
             // 
-            // label3
+            // lbQty
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(171, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 17);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Qty";
+            this.lbQty.AutoSize = true;
+            this.lbQty.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbQty.Location = new System.Drawing.Point(171, 113);
+            this.lbQty.Name = "lbQty";
+            this.lbQty.Size = new System.Drawing.Size(30, 17);
+            this.lbQty.TabIndex = 31;
+            this.lbQty.Text = "Qty";
             // 
-            // label2
+            // lbPrice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(43, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 17);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Price";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbPrice.Location = new System.Drawing.Point(43, 113);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(38, 17);
+            this.lbPrice.TabIndex = 30;
+            this.lbPrice.Text = "Price";
             // 
-            // txt_total
+            // tbTotal
             // 
-            this.txt_total.Location = new System.Drawing.Point(266, 132);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.ReadOnly = true;
-            this.txt_total.Size = new System.Drawing.Size(100, 23);
-            this.txt_total.TabIndex = 29;
-            this.txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbTotal.Location = new System.Drawing.Point(266, 132);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.ReadOnly = true;
+            this.tbTotal.Size = new System.Drawing.Size(100, 23);
+            this.tbTotal.TabIndex = 29;
+            this.tbTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txt_qty
+            // tbQty
             // 
-            this.txt_qty.Location = new System.Drawing.Point(138, 132);
-            this.txt_qty.Name = "txt_qty";
-            this.txt_qty.Size = new System.Drawing.Size(100, 23);
-            this.txt_qty.TabIndex = 28;
-            this.txt_qty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_qty.TextChanged += new System.EventHandler(this.txt_qty_TextChanged);
+            this.tbQty.Location = new System.Drawing.Point(138, 132);
+            this.tbQty.Name = "tbQty";
+            this.tbQty.Size = new System.Drawing.Size(100, 23);
+            this.tbQty.TabIndex = 28;
+            this.tbQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbQty.TextChanged += new System.EventHandler(this.txt_qty_TextChanged);
             // 
-            // txt_price
+            // tbPrice
             // 
-            this.txt_price.Location = new System.Drawing.Point(17, 133);
-            this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(90, 23);
-            this.txt_price.TabIndex = 27;
-            this.txt_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPrice.Location = new System.Drawing.Point(17, 133);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(90, 23);
+            this.tbPrice.TabIndex = 27;
+            this.tbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // lbCustomer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Customer";
+            this.lbCustomer.AutoSize = true;
+            this.lbCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCustomer.Location = new System.Drawing.Point(14, 42);
+            this.lbCustomer.Name = "lbCustomer";
+            this.lbCustomer.Size = new System.Drawing.Size(67, 17);
+            this.lbCustomer.TabIndex = 26;
+            this.lbCustomer.Text = "Customer";
             // 
-            // cmb_customers
+            // cmbCustomers
             // 
-            this.cmb_customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_customers.FormattingEnabled = true;
-            this.cmb_customers.Location = new System.Drawing.Point(96, 42);
-            this.cmb_customers.Name = "cmb_customers";
-            this.cmb_customers.Size = new System.Drawing.Size(364, 24);
-            this.cmb_customers.TabIndex = 25;
+            this.cmbCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCustomers.FormattingEnabled = true;
+            this.cmbCustomers.Location = new System.Drawing.Point(96, 42);
+            this.cmbCustomers.Name = "cmbCustomers";
+            this.cmbCustomers.Size = new System.Drawing.Size(364, 24);
+            this.cmbCustomers.TabIndex = 25;
             // 
-            // label7
+            // lbSelectItem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(14, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 17);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Select Item";
+            this.lbSelectItem.AutoSize = true;
+            this.lbSelectItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbSelectItem.Location = new System.Drawing.Point(14, 72);
+            this.lbSelectItem.Name = "lbSelectItem";
+            this.lbSelectItem.Size = new System.Drawing.Size(76, 17);
+            this.lbSelectItem.TabIndex = 50;
+            this.lbSelectItem.Text = "Select Item";
             // 
-            // cmb_items
+            // cmbItems
             // 
-            this.cmb_items.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_items.FormattingEnabled = true;
-            this.cmb_items.Items.AddRange(new object[] {
+            this.cmbItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbItems.FormattingEnabled = true;
+            this.cmbItems.Items.AddRange(new object[] {
             "Normal:",
             "Chocolate",
             "Nutella",
             "Mango",
             "Raspberry",
             "Strawberry"});
-            this.cmb_items.Location = new System.Drawing.Point(96, 70);
-            this.cmb_items.Name = "cmb_items";
-            this.cmb_items.Size = new System.Drawing.Size(364, 24);
-            this.cmb_items.TabIndex = 49;
-            this.cmb_items.SelectedIndexChanged += new System.EventHandler(this.cmb_items_SelectedIndexChanged_1);
+            this.cmbItems.Location = new System.Drawing.Point(96, 70);
+            this.cmbItems.Name = "cmbItems";
+            this.cmbItems.Size = new System.Drawing.Size(364, 24);
+            this.cmbItems.TabIndex = 49;
+            this.cmbItems.SelectedIndexChanged += new System.EventHandler(this.cmb_items_SelectedIndexChanged_1);
             // 
-            // label8
+            // lbFullTotal
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(344, 366);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 17);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Total";
+            this.lbFullTotal.AutoSize = true;
+            this.lbFullTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbFullTotal.Location = new System.Drawing.Point(344, 366);
+            this.lbFullTotal.Name = "lbFullTotal";
+            this.lbFullTotal.Size = new System.Drawing.Size(39, 17);
+            this.lbFullTotal.TabIndex = 52;
+            this.lbFullTotal.Text = "Total";
             // 
-            // textBox1
+            // tbFullTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(387, 363);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(86, 23);
-            this.textBox1.TabIndex = 51;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFullTotal.Location = new System.Drawing.Point(387, 363);
+            this.tbFullTotal.Name = "tbFullTotal";
+            this.tbFullTotal.ReadOnly = true;
+            this.tbFullTotal.Size = new System.Drawing.Size(86, 23);
+            this.tbFullTotal.TabIndex = 51;
+            this.tbFullTotal.Text = "0";
+            this.tbFullTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // printDocument1
             // 
@@ -354,10 +352,6 @@
             this.btnRemoveItem.UseVisualStyleBackColor = true;
             this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
-            // ScreenCapture
-            // 
-            this.ScreenCapture.Interval = 2000;
-            // 
             // CreateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -373,23 +367,23 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmb_customers);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.txt_total);
-            this.Controls.Add(this.txt_qty);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_sub);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_price);
-            this.Controls.Add(this.cmb_items);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_discount);
+            this.Controls.Add(this.lbFullTotal);
+            this.Controls.Add(this.lbCustomer);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.cmbCustomers);
+            this.Controls.Add(this.lbQty);
+            this.Controls.Add(this.lbPrice);
+            this.Controls.Add(this.tbFullTotal);
+            this.Controls.Add(this.lvItems);
+            this.Controls.Add(this.tbTotal);
+            this.Controls.Add(this.tbQty);
+            this.Controls.Add(this.lbSelectItem);
+            this.Controls.Add(this.tbSubTotal);
+            this.Controls.Add(this.lbDiscount);
+            this.Controls.Add(this.tbPrice);
+            this.Controls.Add(this.cmbItems);
+            this.Controls.Add(this.lbSubTotal);
+            this.Controls.Add(this.tbDiscount);
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -405,27 +399,27 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_discount;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_sub;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label lbDiscount;
+        private System.Windows.Forms.TextBox tbDiscount;
+        private System.Windows.Forms.Label lbSubTotal;
+        private System.Windows.Forms.TextBox tbSubTotal;
+        private System.Windows.Forms.ListView lvItems;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_total;
-        private System.Windows.Forms.TextBox txt_qty;
-        private System.Windows.Forms.TextBox txt_price;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmb_customers;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmb_items;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Label lbQty;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.TextBox tbTotal;
+        private System.Windows.Forms.TextBox tbQty;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.Label lbCustomer;
+        private System.Windows.Forms.ComboBox cmbCustomers;
+        private System.Windows.Forms.Label lbSelectItem;
+        private System.Windows.Forms.ComboBox cmbItems;
+        private System.Windows.Forms.Label lbFullTotal;
+        private System.Windows.Forms.TextBox tbFullTotal;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
@@ -435,7 +429,6 @@
         private UI.Controls.ModernButton btnRefresh;
         private UI.Controls.ModernButton btnAddItem;
         private UI.Controls.ModernButton btnRemoveItem;
-        private System.Windows.Forms.Timer ScreenCapture;
     }
 }
 
