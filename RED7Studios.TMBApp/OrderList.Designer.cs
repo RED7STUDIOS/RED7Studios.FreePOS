@@ -66,43 +66,47 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "id";
+            this.columnHeader1.Text = "ID";
             this.columnHeader1.Width = 30;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "customer";
+            this.columnHeader2.Text = "Customer";
             this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "date";
+            this.columnHeader3.Text = "Date";
             this.columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "total";
+            this.columnHeader4.Text = "Total";
             this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "discount";
+            this.columnHeader5.Text = "Discount";
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "item";
+            this.columnHeader6.Text = "Item";
+            this.columnHeader6.Width = 183;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "itemprice";
+            this.columnHeader7.Text = "ItemPrice";
+            this.columnHeader7.Width = 75;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "itemqty";
+            this.columnHeader8.Text = "ItemQty";
+            this.columnHeader8.Width = 83;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "itemtotal";
+            this.columnHeader9.Text = "ItemTotal";
+            this.columnHeader9.Width = 61;
             // 
             // lbCustomer
             // 

@@ -170,6 +170,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "frmDatabase";
             this.Text = "Database";
+            this.Load += new System.EventHandler(this.frmDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

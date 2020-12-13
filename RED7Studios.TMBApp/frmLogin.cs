@@ -1,5 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using RED7Studios.UI.Forms;
+using SnipeSharp;
+using SnipeSharp.Endpoints.Models;
+using SnipeSharp.Endpoints.SearchFilters;
 using System;
 using System.Data;
 using System.IO;

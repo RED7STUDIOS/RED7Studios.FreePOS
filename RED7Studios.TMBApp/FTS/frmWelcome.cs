@@ -23,10 +23,10 @@ namespace RED7Studios.FreePOS.FTS
             // Hide this form.
             Hide();
 
-            // Create a new frmLicense called 'license'.
-            frmLicense license = new frmLicense();
-            // Show the 'license' form.
-            license.Show();
+            // Create a new frmDatabase called 'database'.
+            frmDatabase database = new frmDatabase();
+            // Show the 'database' form.
+            database.Show();
         }
     }
 }
