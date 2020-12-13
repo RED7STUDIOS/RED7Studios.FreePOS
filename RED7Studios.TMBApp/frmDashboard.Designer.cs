@@ -55,6 +55,7 @@
             this.mtAdminTasks.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.mtAdminTasks.UseTileImage = true;
             this.mtAdminTasks.Visible = false;
+            this.mtAdminTasks.Click += new System.EventHandler(this.mtAdminTasks_Click);
             // 
             // mtOrderList
             // 

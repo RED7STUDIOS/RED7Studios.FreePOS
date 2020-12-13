@@ -80,5 +80,11 @@ namespace RED7Studios.FreePOS
             // Show the 'list' form.
             list.Show();
         }
+
+        private void mtAdminTasks_Click(object sender, EventArgs e)
+        {
+            // Show a message box to say that it is still in development.
+            MessageBox.Show("This feature is still under developement. To create users, please login to the database.");
+        }
     }
 }
