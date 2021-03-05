@@ -1,5 +1,5 @@
 ﻿using AutoUpdaterDotNET;
-using RED7Studios.FreePOS.FTS;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -26,14 +26,12 @@ namespace RED7Studios.FreePOS
                 // Create a new directory called 'Data'.
                 Directory.CreateDirectory("Data");
             }
+
             // Enable visual styles for the application.
             Application.EnableVisualStyles();
 
             // Set the compatible text rendering default to false.
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // If the Data\connectionString doesn't exist.
-            AntiPiracy piracy = new AntiPiracy();
 
             // Start the updater with the NEW url.
             AutoUpdater.Start(settings.UpdateURL + settings.UpdateURLXML);
@@ -41,20 +39,16 @@ namespace RED7Studios.FreePOS
             // Write a line to the console with the settings.
             Console.WriteLine("\n\nSettings:\nVersion: " + settings.Version + "\nBeta: " + settings.Beta + "\n\nUpdate URL: " + settings.UpdateURL + "\nUpdate Structure: " + settings.UpdateURL + settings.UpdateURLStruct + "\nUpdate XML: " + settings.UpdateURL + settings.UpdateURLXML + "\n\n");
 
-            // Check for Piracy ;)
-            if (piracy.PiracyCheck() == false)
+            // If the connection string for the database doesn't exist.
+            if (!File.Exists("Data\\connectionString"))
             {
-                // If the connection string for the database doesn't exist.
-                if (!File.Exists("Data\\connectionString"))
-                {
-                    // Run in setup mode.
-                    Application.Run(new FTS.frmWelcome());
-                }
-                else
-                {
-                    // Run in normal mode.
-                    Application.Run(new frmLogin());
-                }
+                // Run in setup mode.
+                Application.Run(new FTS.frmWelcome());
+            }
+            else
+            {
+                // Run in normal mode.
+                Application.Run(new frmLogin());
             }
         }
     }

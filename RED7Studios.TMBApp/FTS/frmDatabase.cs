@@ -41,7 +41,7 @@ namespace RED7Studios.FreePOS.FTS
                     using (StreamWriter sw = File.CreateText(path))
                     {
                         // Write line to the stream writer.
-                        sw.WriteLine("Server = " + tbHostname.Text + "; Database=" + tbDatabase.Text + ";Uid=" + tbUsername.Text + ";Pwd=" + tbPassword.Text + ";");
+                        sw.WriteLine(Cryptography.Encrypt("Server = " + tbHostname.Text + "; Database=" + tbDatabase.Text + "; Uid=" + tbUsername.Text + "; Pwd=" + tbPassword.Text + ";"));
                     }
                 }
 
@@ -57,63 +57,68 @@ namespace RED7Studios.FreePOS.FTS
                         Console.WriteLine(s);
                     }
                 }
-
-                try
+                if (cbInstallNow.Checked == true)
                 {
-                    // Show a message box.
-                    MessageBox.Show("The program may freeze, while creating the structure.", "SYSTEM");
-
-                    // Create a new mysql connection called 'conn' with the connection string.
-                    MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
-
-                    // Using the web client named 'client'.
-                    using (var client = new WebClient())
+                    try
                     {
-                        // If the directory Data\TEMP doesn't exist.
-                        if (!Directory.Exists("Data\\TEMP"))
+                        // Show a message box.
+                        MessageBox.Show("The program may freeze, while creating the structure.", "SYSTEM");
+
+                        // Create a new mysql connection called 'conn' with the connection string.
+                        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
+
+                        // Using the web client named 'client'.
+                        using (var client = new WebClient())
                         {
-                            // Create the directory Data\TEMP.
-                            Directory.CreateDirectory("Data\\TEMP");
+                            // If the directory Data\TEMP doesn't exist.
+                            if (!Directory.Exists("Data\\TEMP"))
+                            {
+                                // Create the directory Data\TEMP.
+                                Directory.CreateDirectory("Data\\TEMP");
+                            }
+                            // Download the .sql file to the Data\TEMP\db.sql location.
+                            client.DownloadFile("https://github.com/RED7Studios/FreePOS/raw/master/0.0.1/db.sql", "Data\\TEMP\\db.sql");
                         }
-                        // Download the .sql file to the Data\TEMP\db.sql location.
-                        client.DownloadFile("https://github.com/RED7Studios/FreePOS/raw/master/0.0.1/db.sql", "Data\\TEMP\\db.sql");
+
+                        // Create a new string called 'Query' with the content of the .sql file.
+                        string Query = File.ReadAllText("Data\\TEMP\\db.sql");
+
+                        // Create a new mysql command named 'command' with the query and connection.
+                        MySqlCommand command = new MySqlCommand(Query, conn);
+                        // Create a new mysql reader named 'reader'.
+                        MySqlDataReader reader;
+                        // Open the connection.
+                        conn.Open();
+                        // Set the reader to the command executed.
+                        reader = command.ExecuteReader();
+                        // Show a message box.
+                        MessageBox.Show("Successfully made the database structure!", "SYSTEM");
+                        // Close the connection.
+                        conn.Close();
+
+                        // Delete the Data\TEMP directory.
+                        Directory.Delete("Data\\TEMP");
+                        // Delete the .sql file.
+                        File.Delete("Data\\TEMP\\db.sql");
+
+                        // Hide this form.
+                        Hide();
+
+                        // Create a new frmOptional named 'optional'.
+                        frmOptional optional = new frmOptional();
+                        // Show the 'optional' form.
+                        optional.Show();
                     }
-
-                    // Create a new string called 'Query' with the content of the .sql file.
-                    string Query = File.ReadAllText("Data\\TEMP\\db.sql");
-
-                    // Create a new mysql command named 'command' with the query and connection.
-                    MySqlCommand command = new MySqlCommand(Query, conn);
-                    // Create a new mysql reader named 'reader'.
-                    MySqlDataReader reader;
-                    // Open the connection.
-                    conn.Open();
-                    // Set the reader to the command executed.
-                    reader = command.ExecuteReader();
-                    // Show a message box.
-                    MessageBox.Show("Successfully made the database structure!", "SYSTEM");
-                    // Close the connection.
-                    conn.Close();
-
-                    // Delete the Data\TEMP directory.
-                    Directory.Delete("Data\\TEMP");
-                    // Delete the .sql file.
-                    File.Delete("Data\\TEMP\\db.sql");
-
-                    // Hide this form.
-                    Hide();
-
-                    // Create a new frmOptional named 'optional'.
-                    frmOptional optional = new frmOptional();
-                    // Show the 'optional' form.
-                    optional.Show();
-                }
-                catch (Exception ex)
+                    catch (Exception ex)
+                    {
+                        // Show a message box.
+                        MessageBox.Show("An error occured: " + ex.Message, "CRITICAL ERROR!");
+                    }
+                } else
                 {
-                    // Show a message box.
-                    MessageBox.Show("An error occured: " + ex.Message, "CRITICAL ERROR!");
+                    MessageBox.Show("The structure will not be created, as you. have checked to install it later. This also means that a database check to see if all the information is correct has not been performed, if you get stuck at the login screen just go to the bottom of it and click the invisible button to reset to FTS.", "SYSTEM");
                 }
-
+    
                 // Hide this form.
                 Hide();
 
@@ -124,23 +129,48 @@ namespace RED7Studios.FreePOS.FTS
             }
         }
 
-        private void modernButton2_Click(object sender, EventArgs e)
+        private void frmDatabase_Load(object sender, EventArgs e)
+        {
+            if (File.Exists("Data\\connectionString"))
+            {
+                // Delete connection string just in case of failure.
+                File.Delete("Data\\connectionString");
+            }
+
+            if (File.Exists("Data\\TEMP\\db.sql"))
+            {
+                // Delete the DB.sql file if just in case.
+                File.Delete("Data\\TEMP\\db.sql");
+            }
+
+            if (Directory.Exists("Data\\TEMP"))
+            {
+                // Delete TEMP folder just in case of failure.
+                Directory.Delete("Data\\TEMP");
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
             // Hide this form.
             Hide();
 
-            // Create a new frmLicense named 'license'.
-            frmLicense license = new frmLicense();
-            // Show the 'license' form.
-            license.Show();
+            // Create a new frmDatabase called 'database'.
+            frmDatabase database = new frmDatabase();
+            // Show the 'database' form.
+            database.Show();
         }
 
-        private void frmDatabase_Load(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            // Delete connection string just in case of failure.
-            File.Delete("Data\\connectionString");
-            // Delete TEMP folder just in case of failure.
-            Directory.Delete("Data\\TEMP");
+            if (cbInstallLater.Checked == true)
+            {
+                cbInstallNow.Checked = false;
+            }
+            else
+            {
+                cbInstallLater.Checked = false;
+            }
         }
     }
 }

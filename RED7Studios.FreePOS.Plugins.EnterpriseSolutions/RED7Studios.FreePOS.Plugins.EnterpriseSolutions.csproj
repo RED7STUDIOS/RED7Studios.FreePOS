@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A17EA25-FD9B-4C6A-B067-A2DDD97C09DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RED7Studios.FreePOS.Plugins.EnterpriseSolutions</RootNamespace>
+    <AssemblyName>RED7Studios.FreePOS.Plugins.EnterpriseSolutions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RED7Studios.UI">
+      <HintPath>..\..\RED7Studios.UI\RED7Studios.UI\bin\Release\RED7Studios.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cryptography.cs" />
+    <Compile Include="frmAdminButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminButton.Designer.cs">
+      <DependentUpon>frmAdminButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeButton.Designer.cs">
+      <DependentUpon>frmEmployeeButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Starter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAdminButton.resx">
+      <DependentUpon>frmAdminButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeButton.resx">
+      <DependentUpon>frmEmployeeButton.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RED7Studios.FreePOS.PluginInterface\RED7Studios.FreePOS.PluginInterface.csproj">
+      <Project>{a704eb88-7bcf-4c84-ac54-c6f70fdfc8b0}</Project>
+      <Name>RED7Studios.FreePOS.PluginInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "D:\GitHub\RED7Studios.TMBApp\RED7Studios.FreePOS.Plugins.EnterpriseSolutions\bin\Debug\RED7Studios.FreePOS.Plugins.EnterpriseSolutions.dll" "D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Plugins\RED7Studios.FreePOS.Plugins.EnterpriseSolutions.dll" /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

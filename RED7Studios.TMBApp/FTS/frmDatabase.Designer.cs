@@ -39,12 +39,14 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lbUsername = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
+            this.cbInstallLater = new MetroFramework.Controls.MetroRadioButton();
+            this.cbInstallNow = new MetroFramework.Controls.MetroRadioButton();
             this.SuspendLayout();
             // 
             // tbHostname
             // 
             this.tbHostname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.tbHostname.Location = new System.Drawing.Point(124, 177);
+            this.tbHostname.Location = new System.Drawing.Point(124, 225);
             this.tbHostname.Name = "tbHostname";
             this.tbHostname.Size = new System.Drawing.Size(325, 30);
             this.tbHostname.TabIndex = 12;
@@ -59,7 +61,7 @@
             this.btnBack.TabIndex = 11;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.modernButton2_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnNext
             // 
@@ -87,7 +89,7 @@
             // 
             this.lbHostname.AutoSize = true;
             this.lbHostname.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lbHostname.Location = new System.Drawing.Point(13, 177);
+            this.lbHostname.Location = new System.Drawing.Point(13, 225);
             this.lbHostname.Name = "lbHostname";
             this.lbHostname.Size = new System.Drawing.Size(105, 28);
             this.lbHostname.TabIndex = 13;
@@ -97,7 +99,7 @@
             // 
             this.lbDatabase.AutoSize = true;
             this.lbDatabase.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lbDatabase.Location = new System.Drawing.Point(13, 213);
+            this.lbDatabase.Location = new System.Drawing.Point(13, 261);
             this.lbDatabase.Name = "lbDatabase";
             this.lbDatabase.Size = new System.Drawing.Size(97, 28);
             this.lbDatabase.TabIndex = 15;
@@ -106,7 +108,7 @@
             // tbDatabase
             // 
             this.tbDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.tbDatabase.Location = new System.Drawing.Point(124, 213);
+            this.tbDatabase.Location = new System.Drawing.Point(124, 261);
             this.tbDatabase.Name = "tbDatabase";
             this.tbDatabase.Size = new System.Drawing.Size(325, 30);
             this.tbDatabase.TabIndex = 14;
@@ -115,7 +117,7 @@
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lbPassword.Location = new System.Drawing.Point(13, 285);
+            this.lbPassword.Location = new System.Drawing.Point(13, 333);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(97, 28);
             this.lbPassword.TabIndex = 19;
@@ -124,7 +126,7 @@
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.tbPassword.Location = new System.Drawing.Point(124, 285);
+            this.tbPassword.Location = new System.Drawing.Point(124, 333);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(325, 30);
             this.tbPassword.TabIndex = 18;
@@ -133,7 +135,7 @@
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lbUsername.Location = new System.Drawing.Point(13, 249);
+            this.lbUsername.Location = new System.Drawing.Point(13, 297);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(103, 28);
             this.lbUsername.TabIndex = 17;
@@ -142,10 +144,32 @@
             // tbUsername
             // 
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.tbUsername.Location = new System.Drawing.Point(124, 249);
+            this.tbUsername.Location = new System.Drawing.Point(124, 297);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(325, 30);
             this.tbUsername.TabIndex = 16;
+            // 
+            // cbInstallLater
+            // 
+            this.cbInstallLater.AutoSize = true;
+            this.cbInstallLater.Location = new System.Drawing.Point(13, 191);
+            this.cbInstallLater.Name = "cbInstallLater";
+            this.cbInstallLater.Size = new System.Drawing.Size(396, 15);
+            this.cbInstallLater.TabIndex = 20;
+            this.cbInstallLater.Text = "I want to install the database file later, or I have already have one setup.";
+            this.cbInstallLater.UseVisualStyleBackColor = true;
+            // 
+            // cbInstallNow
+            // 
+            this.cbInstallNow.AutoSize = true;
+            this.cbInstallNow.Checked = true;
+            this.cbInstallNow.Location = new System.Drawing.Point(13, 170);
+            this.cbInstallNow.Name = "cbInstallNow";
+            this.cbInstallNow.Size = new System.Drawing.Size(376, 15);
+            this.cbInstallNow.TabIndex = 21;
+            this.cbInstallNow.TabStop = true;
+            this.cbInstallNow.Text = "I don\'t have a database structure, I need a database structure setup.";
+            this.cbInstallNow.UseVisualStyleBackColor = true;
             // 
             // frmDatabase
             // 
@@ -156,6 +180,8 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.Controls.Add(this.cbInstallNow);
+            this.Controls.Add(this.cbInstallLater);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.lbUsername);
@@ -189,5 +215,7 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.TextBox tbUsername;
+        private MetroFramework.Controls.MetroRadioButton cbInstallLater;
+        private MetroFramework.Controls.MetroRadioButton cbInstallNow;
     }
 }

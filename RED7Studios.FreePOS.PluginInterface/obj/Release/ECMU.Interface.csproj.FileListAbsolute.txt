@@ -1,0 +1,17 @@
+H:\VS Projects\EzCar2\ECMU.Interface\bin\Release\ECMU.Interface.dll
+H:\VS Projects\EzCar2\ECMU.Interface\bin\Release\ECMU.Interface.pdb
+H:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.csproj.CoreCompileInputs.cache
+H:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.dll
+H:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.pdb
+E:\VS Projects\EzCar2\ECMU.Interface\bin\Release\ECMU.Interface.dll
+E:\VS Projects\EzCar2\ECMU.Interface\bin\Release\ECMU.Interface.pdb
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.csprojAssemblyReference.cache
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.csproj.CoreCompileInputs.cache
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.dll
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.pdb
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\bin\Release\ECMU.Interface.dll
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\bin\Release\ECMU.Interface.pdb
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.csproj.CoreCompileInputs.cache
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.dll
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.pdb
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Release\ECMU.Interface.csprojAssemblyReference.cache

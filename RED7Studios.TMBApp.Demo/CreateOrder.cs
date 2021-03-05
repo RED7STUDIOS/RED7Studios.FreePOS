@@ -21,7 +21,7 @@ namespace RED7Studios.FreePOS
 {
     public partial class CreateOrder : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
         string _username;
 
@@ -51,7 +51,7 @@ namespace RED7Studios.FreePOS
             cmb_customers.Items.Clear();
 
             DataTable customertable = new DataTable("customertable");
-            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
+            using (MySqlConnection sqlConn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString"))))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {
@@ -69,7 +69,7 @@ namespace RED7Studios.FreePOS
             cmb_items.Items.Clear();
 
             DataTable itemtable = new DataTable("itemtable");
-            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
+            using (MySqlConnection sqlConn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString"))))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT name FROM items WHERE name <> 'NULL'", sqlConn))
                 {

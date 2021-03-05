@@ -39,7 +39,6 @@
             this.tbLast = new System.Windows.Forms.TextBox();
             this.lbFirst = new System.Windows.Forms.Label();
             this.tbFirst = new System.Windows.Forms.TextBox();
-            this.modernButton1 = new RED7Studios.UI.Controls.ModernButton();
             this.SuspendLayout();
             // 
             // lbPass
@@ -76,7 +75,7 @@
             // 
             this.btnNext.CustomColorScheme = false;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.btnNext.Location = new System.Drawing.Point(12, 368);
+            this.btnNext.Location = new System.Drawing.Point(13, 435);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(230, 70);
             this.btnNext.TabIndex = 21;
@@ -148,18 +147,6 @@
             this.tbFirst.Size = new System.Drawing.Size(325, 30);
             this.tbFirst.TabIndex = 35;
             // 
-            // modernButton1
-            // 
-            this.modernButton1.CustomColorScheme = false;
-            this.modernButton1.Font = new System.Drawing.Font("Segoe UI", 18.25F);
-            this.modernButton1.Location = new System.Drawing.Point(13, 435);
-            this.modernButton1.Name = "modernButton1";
-            this.modernButton1.Size = new System.Drawing.Size(230, 70);
-            this.modernButton1.TabIndex = 21;
-            this.modernButton1.Text = "Next";
-            this.modernButton1.UseVisualStyleBackColor = true;
-            this.modernButton1.Click += new System.EventHandler(this.btnNext_Click);
-            // 
             // frmDefaultAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -178,7 +165,6 @@
             this.Controls.Add(this.lbPass);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.modernButton1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lbComment);
             this.Location = new System.Drawing.Point(0, 0);
@@ -202,6 +188,5 @@
         private System.Windows.Forms.TextBox tbLast;
         private System.Windows.Forms.Label lbFirst;
         private System.Windows.Forms.TextBox tbFirst;
-        private UI.Controls.ModernButton modernButton1;
     }
 }

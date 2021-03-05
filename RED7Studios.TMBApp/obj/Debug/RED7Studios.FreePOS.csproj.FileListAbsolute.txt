@@ -13,7 +13,6 @@ D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\MySql.Data.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Newtonsoft.Json.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Renci.SshNet.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RestSharp.dll
-D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\SnipeSharp.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\System.Buffers.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\System.Memory.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\System.Numerics.Vectors.dll
@@ -42,7 +41,6 @@ D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.fr
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.FTS.frmOptional.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.FTS.frmDatabase.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.FTS.frmDefaultAdmin.resources
-D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.FTS.frmLicense.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.FTS.frmWelcome.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.OrderList.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.Properties.Resources.resources
@@ -52,3 +50,19 @@ D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.cs
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.csproj.CopyComplete
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.exe
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.pdb
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.csprojAssemblyReference.cache
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.AdminTasks.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.AT_UserManager.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.AT_UserMan_NewUser.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.AT_ItemManager.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.AT_ItemMan_NewItem.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.frmSettings.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.ServerSettings.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RED7Studios.FreePOS.PluginInterface.dll
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\RED7Studios.FreePOS.PluginInterface.pdb
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.AT_Plugins.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Debug\RED7Studios.FreePOS.frmPlugins.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Debug\Microsoft.Extensions.Primitives.xml

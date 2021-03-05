@@ -109,7 +109,6 @@ D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\System.Memory.xml
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\System.Numerics.Vectors.xml
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\bin\Release\System.ValueTuple.xml
-D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.csprojAssemblyReference.cache
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.CreateOrder.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.frmDashboard.resources
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.frmLogin.resources
@@ -126,3 +125,8 @@ D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.csproj.CopyComplete
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.exe
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.pdb
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.AdminTasks.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.AT_ItemMan_NewItem.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.AT_ItemManager.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.AT_UserMan_NewUser.resources
+D:\GitHub\RED7Studios.TMBApp\RED7Studios.TMBApp\obj\Release\RED7Studios.FreePOS.AT_UserManager.resources

@@ -1,0 +1,30 @@
+H:\VS Projects\ClubsportOS\PluginInterface\bin\Debug\ECMU.Interface.dll
+H:\VS Projects\ClubsportOS\PluginInterface\bin\Debug\ECMU.Interface.pdb
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\ECMU.Interface.csproj.CoreCompileInputs.cache
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\ECMU.Interface.dll
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\ECMU.Interface.pdb
+H:\VS Projects\ClubsportOS\ECMU.Interface\bin\Debug\ECMU.Interface.dll
+H:\VS Projects\ClubsportOS\ECMU.Interface\bin\Debug\ECMU.Interface.pdb
+H:\VS Projects\ClubsportOS\ECMU.Interface\obj\Debug\ECMU.Interface.csproj.CoreCompileInputs.cache
+H:\VS Projects\ClubsportOS\ECMU.Interface\obj\Debug\ECMU.Interface.dll
+H:\VS Projects\ClubsportOS\ECMU.Interface\obj\Debug\ECMU.Interface.pdb
+H:\VS Projects\ClubsportOS\ECMU.Interface\bin\Debug\Bunifu_UI_v1.5.3.dll
+H:\VS Projects\ClubsportOS\ECMU.Interface\bin\Debug\Bunifu_UI_v1.5.3.xml
+H:\VS Projects\ClubsportOS\ECMU.Interface\obj\Debug\ECMU.Interface.csprojAssemblyReference.cache
+H:\VS Projects\ClubsportOS\ECMU.Interface\obj\Debug\ECMU.Interface.csproj.CopyComplete
+H:\VS Projects\EzCar2\ECMU.Interface\bin\Debug\ECMU.Interface.dll
+H:\VS Projects\EzCar2\ECMU.Interface\bin\Debug\ECMU.Interface.pdb
+H:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.csproj.CoreCompileInputs.cache
+H:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.dll
+H:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.pdb
+E:\VS Projects\EzCar2\ECMU.Interface\bin\Debug\ECMU.Interface.dll
+E:\VS Projects\EzCar2\ECMU.Interface\bin\Debug\ECMU.Interface.pdb
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.csprojAssemblyReference.cache
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.csproj.CoreCompileInputs.cache
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.dll
+E:\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.pdb
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\bin\Debug\ECMU.Interface.dll
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\bin\Debug\ECMU.Interface.pdb
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.csproj.CoreCompileInputs.cache
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.dll
+E:\4. Development\VS Projects\EzCar2\ECMU.Interface\obj\Debug\ECMU.Interface.pdb

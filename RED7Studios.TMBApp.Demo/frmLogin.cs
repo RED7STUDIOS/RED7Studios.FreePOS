@@ -15,7 +15,7 @@ namespace RED7Studios.FreePOS
 {
     public partial class frmLogin : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
         MySqlDataAdapter adapter;
 

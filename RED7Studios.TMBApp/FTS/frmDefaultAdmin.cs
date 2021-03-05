@@ -16,7 +16,7 @@ namespace RED7Studios.FreePOS.FTS
     public partial class frmDefaultAdmin : ModernForm
     {
         // Create a new mysql connection called 'conn' and read the connection string.
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
         public frmDefaultAdmin()
         {

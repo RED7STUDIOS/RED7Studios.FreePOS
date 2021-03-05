@@ -15,7 +15,7 @@ namespace RED7Studios.FreePOS.FTS
 {
     public partial class frmDefaultAdmin : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
         public frmDefaultAdmin()
         {

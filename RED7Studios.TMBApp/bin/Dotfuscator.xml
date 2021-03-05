@@ -25,6 +25,11 @@
   </output>
   <renaming>
     <option>xmlserialization</option>
+    <mapping>
+      <mapoutput overwrite="false">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
     <referencerulelist />
   </renaming>
   <controlflow level="high" />

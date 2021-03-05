@@ -59,13 +59,14 @@
             this.btnRefresh = new RED7Studios.UI.Controls.ModernButton();
             this.btnAddItem = new RED7Studios.UI.Controls.ModernButton();
             this.btnRemoveItem = new RED7Studios.UI.Controls.ModernButton();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // lbDiscount
             // 
             this.lbDiscount.AutoSize = true;
             this.lbDiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbDiscount.Location = new System.Drawing.Point(176, 366);
+            this.lbDiscount.Location = new System.Drawing.Point(175, 388);
             this.lbDiscount.Name = "lbDiscount";
             this.lbDiscount.Size = new System.Drawing.Size(63, 17);
             this.lbDiscount.TabIndex = 38;
@@ -73,7 +74,7 @@
             // 
             // tbDiscount
             // 
-            this.tbDiscount.Location = new System.Drawing.Point(243, 363);
+            this.tbDiscount.Location = new System.Drawing.Point(242, 385);
             this.tbDiscount.Name = "tbDiscount";
             this.tbDiscount.Size = new System.Drawing.Size(90, 23);
             this.tbDiscount.TabIndex = 37;
@@ -85,7 +86,7 @@
             // 
             this.lbSubTotal.AutoSize = true;
             this.lbSubTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbSubTotal.Location = new System.Drawing.Point(12, 366);
+            this.lbSubTotal.Location = new System.Drawing.Point(11, 388);
             this.lbSubTotal.Name = "lbSubTotal";
             this.lbSubTotal.Size = new System.Drawing.Size(66, 17);
             this.lbSubTotal.TabIndex = 36;
@@ -93,7 +94,7 @@
             // 
             // tbSubTotal
             // 
-            this.tbSubTotal.Location = new System.Drawing.Point(81, 363);
+            this.tbSubTotal.Location = new System.Drawing.Point(80, 385);
             this.tbSubTotal.Name = "tbSubTotal";
             this.tbSubTotal.ReadOnly = true;
             this.tbSubTotal.Size = new System.Drawing.Size(86, 23);
@@ -113,7 +114,7 @@
             this.lvItems.FullRowSelect = true;
             this.lvItems.GridLines = true;
             this.lvItems.HideSelection = false;
-            this.lvItems.Location = new System.Drawing.Point(13, 188);
+            this.lvItems.Location = new System.Drawing.Point(12, 210);
             this.lvItems.Name = "lvItems";
             this.lvItems.Size = new System.Drawing.Size(466, 160);
             this.lvItems.TabIndex = 34;
@@ -144,7 +145,7 @@
             // 
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbTotal.Location = new System.Drawing.Point(296, 113);
+            this.lbTotal.Location = new System.Drawing.Point(295, 135);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(39, 17);
             this.lbTotal.TabIndex = 32;
@@ -154,7 +155,7 @@
             // 
             this.lbQty.AutoSize = true;
             this.lbQty.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbQty.Location = new System.Drawing.Point(171, 113);
+            this.lbQty.Location = new System.Drawing.Point(170, 135);
             this.lbQty.Name = "lbQty";
             this.lbQty.Size = new System.Drawing.Size(30, 17);
             this.lbQty.TabIndex = 31;
@@ -164,7 +165,7 @@
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(43, 113);
+            this.lbPrice.Location = new System.Drawing.Point(42, 135);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(38, 17);
             this.lbPrice.TabIndex = 30;
@@ -172,7 +173,7 @@
             // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(266, 132);
+            this.tbTotal.Location = new System.Drawing.Point(265, 154);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.ReadOnly = true;
             this.tbTotal.Size = new System.Drawing.Size(100, 23);
@@ -181,7 +182,7 @@
             // 
             // tbQty
             // 
-            this.tbQty.Location = new System.Drawing.Point(138, 132);
+            this.tbQty.Location = new System.Drawing.Point(137, 154);
             this.tbQty.Name = "tbQty";
             this.tbQty.Size = new System.Drawing.Size(100, 23);
             this.tbQty.TabIndex = 28;
@@ -190,7 +191,7 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(17, 133);
+            this.tbPrice.Location = new System.Drawing.Point(16, 155);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(90, 23);
             this.tbPrice.TabIndex = 27;
@@ -200,7 +201,7 @@
             // 
             this.lbCustomer.AutoSize = true;
             this.lbCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCustomer.Location = new System.Drawing.Point(14, 42);
+            this.lbCustomer.Location = new System.Drawing.Point(13, 64);
             this.lbCustomer.Name = "lbCustomer";
             this.lbCustomer.Size = new System.Drawing.Size(67, 17);
             this.lbCustomer.TabIndex = 26;
@@ -210,7 +211,7 @@
             // 
             this.cmbCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCustomers.FormattingEnabled = true;
-            this.cmbCustomers.Location = new System.Drawing.Point(96, 42);
+            this.cmbCustomers.Location = new System.Drawing.Point(95, 64);
             this.cmbCustomers.Name = "cmbCustomers";
             this.cmbCustomers.Size = new System.Drawing.Size(364, 24);
             this.cmbCustomers.TabIndex = 25;
@@ -219,7 +220,7 @@
             // 
             this.lbSelectItem.AutoSize = true;
             this.lbSelectItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbSelectItem.Location = new System.Drawing.Point(14, 72);
+            this.lbSelectItem.Location = new System.Drawing.Point(13, 94);
             this.lbSelectItem.Name = "lbSelectItem";
             this.lbSelectItem.Size = new System.Drawing.Size(76, 17);
             this.lbSelectItem.TabIndex = 50;
@@ -236,7 +237,7 @@
             "Mango",
             "Raspberry",
             "Strawberry"});
-            this.cmbItems.Location = new System.Drawing.Point(96, 70);
+            this.cmbItems.Location = new System.Drawing.Point(95, 92);
             this.cmbItems.Name = "cmbItems";
             this.cmbItems.Size = new System.Drawing.Size(364, 24);
             this.cmbItems.TabIndex = 49;
@@ -246,7 +247,7 @@
             // 
             this.lbFullTotal.AutoSize = true;
             this.lbFullTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbFullTotal.Location = new System.Drawing.Point(344, 366);
+            this.lbFullTotal.Location = new System.Drawing.Point(343, 388);
             this.lbFullTotal.Name = "lbFullTotal";
             this.lbFullTotal.Size = new System.Drawing.Size(39, 17);
             this.lbFullTotal.TabIndex = 52;
@@ -254,7 +255,7 @@
             // 
             // tbFullTotal
             // 
-            this.tbFullTotal.Location = new System.Drawing.Point(387, 363);
+            this.tbFullTotal.Location = new System.Drawing.Point(386, 385);
             this.tbFullTotal.Name = "tbFullTotal";
             this.tbFullTotal.ReadOnly = true;
             this.tbFullTotal.Size = new System.Drawing.Size(86, 23);
@@ -284,7 +285,7 @@
             // 
             this.btnPrint.CustomColorScheme = false;
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.Location = new System.Drawing.Point(231, 408);
+            this.btnPrint.Location = new System.Drawing.Point(230, 430);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(104, 30);
             this.btnPrint.TabIndex = 54;
@@ -296,7 +297,7 @@
             // 
             this.btnClear.CustomColorScheme = false;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnClear.Location = new System.Drawing.Point(122, 408);
+            this.btnClear.Location = new System.Drawing.Point(121, 430);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(104, 30);
             this.btnClear.TabIndex = 55;
@@ -308,7 +309,7 @@
             // 
             this.btnSave.CustomColorScheme = false;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnSave.Location = new System.Drawing.Point(13, 408);
+            this.btnSave.Location = new System.Drawing.Point(12, 430);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(104, 30);
             this.btnSave.TabIndex = 56;
@@ -320,7 +321,7 @@
             // 
             this.btnRefresh.CustomColorScheme = false;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.Location = new System.Drawing.Point(466, 42);
+            this.btnRefresh.Location = new System.Drawing.Point(465, 64);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(91, 52);
             this.btnRefresh.TabIndex = 57;
@@ -332,7 +333,7 @@
             // 
             this.btnAddItem.CustomColorScheme = false;
             this.btnAddItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAddItem.Location = new System.Drawing.Point(388, 128);
+            this.btnAddItem.Location = new System.Drawing.Point(387, 150);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(91, 26);
             this.btnAddItem.TabIndex = 58;
@@ -344,13 +345,21 @@
             // 
             this.btnRemoveItem.CustomColorScheme = false;
             this.btnRemoveItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnRemoveItem.Location = new System.Drawing.Point(388, 157);
+            this.btnRemoveItem.Location = new System.Drawing.Point(387, 179);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(91, 26);
             this.btnRemoveItem.TabIndex = 59;
             this.btnRemoveItem.Text = "Remove Item";
             this.btnRemoveItem.UseVisualStyleBackColor = true;
             this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // menu
+            // 
+            this.menu.Location = new System.Drawing.Point(1, 33);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(982, 24);
+            this.menu.TabIndex = 60;
+            this.menu.Text = "menu";
             // 
             // CreateOrder
             // 
@@ -361,6 +370,7 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.Controls.Add(this.menu);
             this.Controls.Add(this.btnRemoveItem);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.btnRefresh);
@@ -429,6 +439,7 @@
         private UI.Controls.ModernButton btnRefresh;
         private UI.Controls.ModernButton btnAddItem;
         private UI.Controls.ModernButton btnRemoveItem;
+        private System.Windows.Forms.MenuStrip menu;
     }
 }
 

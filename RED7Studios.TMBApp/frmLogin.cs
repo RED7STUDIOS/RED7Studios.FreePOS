@@ -1,8 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using RED7Studios.UI.Forms;
-using SnipeSharp;
-using SnipeSharp.Endpoints.Models;
-using SnipeSharp.Endpoints.SearchFilters;
 using System;
 using System.Data;
 using System.IO;
@@ -13,7 +10,7 @@ namespace RED7Studios.FreePOS
     public partial class frmLogin : ModernForm
     {
         // Create connection string variable.
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
         // Create a mysql adapter variable.
         MySqlDataAdapter adapter;
@@ -49,9 +46,11 @@ namespace RED7Studios.FreePOS
             try
             {
                 // Set adapter to a new MySql adapter.
-                adapter = new MySqlDataAdapter("SELECT `username`, `password`, `first`, `last`, `level` FROM `users` WHERE `username` = '" + tbUsername.Text + "' AND `password` = '" + tbPassword.Text + "'", conn);
+                adapter = new MySqlDataAdapter("SELECT `username`, `password`, `first`, `last`, `level` FROM `users` WHERE `username` = '" + tbUsername.Text + "' AND `password` = '" + Cryptography.Encrypt(tbPassword.Text) + "'", conn);
                 // Fill the table with the adapter data.
                 adapter.Fill(table);
+
+                Console.WriteLine(Cryptography.Encrypt(tbPassword.Text));
 
                 // Don't know.
                 DataRow[] currentRows = table.Select(
@@ -120,10 +119,16 @@ namespace RED7Studios.FreePOS
             }
         }
 
-        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Exit the application fully.
             Application.Exit();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            frmSettings settings = new frmSettings();
+            settings.ShowDialog();
         }
     }
 }

@@ -40,7 +40,7 @@
             this.lbComment.Font = new System.Drawing.Font("Segoe UI", 19F);
             this.lbComment.Location = new System.Drawing.Point(12, 49);
             this.lbComment.Name = "lbComment";
-            this.lbComment.Size = new System.Drawing.Size(732, 288);
+            this.lbComment.Size = new System.Drawing.Size(732, 252);
             this.lbComment.TabIndex = 1;
             this.lbComment.Text = resources.GetString("lbComment.Text");
             // 

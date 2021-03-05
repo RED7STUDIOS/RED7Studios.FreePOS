@@ -1,0 +1,9 @@
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\bin\Debug\ExamplePlugin.dll
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\bin\Debug\ExamplePlugin.pdb
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\bin\Debug\RED7Studios.FreePOS.PluginInterface.dll
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\bin\Debug\RED7Studios.FreePOS.PluginInterface.pdb
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\obj\Debug\ExamplePlugin.csprojAssemblyReference.cache
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\obj\Debug\ExamplePlugin.csproj.CoreCompileInputs.cache
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\obj\Debug\ExamplePlugin.csproj.CopyComplete
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\obj\Debug\ExamplePlugin.dll
+D:\GitHub\RED7Studios.TMBApp\ExamplePlugin\obj\Debug\ExamplePlugin.pdb

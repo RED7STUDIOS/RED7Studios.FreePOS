@@ -9,7 +9,7 @@ namespace RED7Studios.FreePOS
 {
     public partial class OrderList : ModernForm
     {
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
         string _username;
 
@@ -30,7 +30,7 @@ namespace RED7Studios.FreePOS
         public void ListCat()
         {
             DataTable linkcat = new DataTable("linkcat");
-            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
+            using (MySqlConnection sqlConn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString"))))
             {
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
                 {

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using RED7Studios.FreePOS.PluginInterface;
 using RED7Studios.UI.Forms;
 using System;
 using System.Collections;
@@ -6,6 +7,8 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -14,7 +17,10 @@ namespace RED7Studios.FreePOS
     public partial class CreateOrder : ModernForm
     {
         // Create connection string variable.
-        MySqlConnection conn = new MySqlConnection(File.ReadAllText("Data\\connectionString"));
+        MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
+
+        // Create a new 'PluginImplementerMenu' called 'PI'.
+        PluginImplementer PI;
 
         // Create string for username.
         string _username;
@@ -28,7 +34,14 @@ namespace RED7Studios.FreePOS
         public CreateOrder(string s, string a)
         {
             // Initialize the form.
-            InitializeComponent();
+            if (a == "admin" || a == "employee")
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                MessageBox.Show("You are not an administrator or employee, you cannot access this feature.", "CRITCAL ERROR");
+            }
 
             // Set the passed username to the string (s).
             _username = s;
@@ -45,6 +58,58 @@ namespace RED7Studios.FreePOS
             FillCustomersCombo();
             // Fill the items combo box using function.
             FillItemsCombo();
+
+            // For each of the plugins in the 'Plugins' directory.
+            foreach (var files in Directory.GetFiles(@"Plugins", "*.dll"))
+            {
+                // Create a new variable called 'assembly' and load the files.
+                var assembly = Assembly.LoadFrom(files);
+                // For each of the types in the assembly types.
+                foreach (var type in assembly.GetTypes())
+                {
+                    // If the type interfaces contains the plugin implementer for the menu.
+                    if (type.GetInterfaces().Contains(typeof(PluginImplementer)))
+                    {
+                        // Set PI to the new instance of type as the plugin implementer for the menu.
+                        PI = Activator.CreateInstance(type) as PluginImplementer;
+                        // Create a new string called 'name' with the plugin name.
+                        string name = PI.PluginName();
+
+                        // Create a new ToolStripMenuItem called 'tsi' with the name of the plugin.
+                        ToolStripMenuItem tsi = new ToolStripMenuItem(name);
+                        // Add the 'tsi' to the menu.
+                        menu.Items.Add(tsi);
+                        // Run the menu adder of the plugin.
+                        PI.CreateOrderMenuAdder(tsi);
+                    }
+                }
+            }
+
+            // For each of the plugins in the 'Plugins' directory.
+            foreach (var files in Directory.GetFiles(@"Plugins", "*.pos_dll"))
+            {
+                // Create a new variable called 'assembly' and load the files.
+                var assembly = Assembly.LoadFrom(files);
+                // For each of the types in the assembly types.
+                foreach (var type in assembly.GetTypes())
+                {
+                    // If the type interfaces contains the plugin implementer for the menu.
+                    if (type.GetInterfaces().Contains(typeof(PluginImplementer)))
+                    {
+                        // Set PI to the new instance of type as the plugin implementer for the menu.
+                        PI = Activator.CreateInstance(type) as PluginImplementer;
+                        // Create a new string called 'name' with the plugin name.
+                        string name = PI.PluginName();
+
+                        // Create a new ToolStripMenuItem called 'tsi' with the name of the plugin.
+                        ToolStripMenuItem tsi = new ToolStripMenuItem(name);
+                        // Add the 'tsi' to the menu.
+                        menu.Items.Add(tsi);
+                        // Run the menu adder of the plugin.
+                        PI.CreateOrderMenuAdder(tsi);
+                    }
+                }
+            }
         }
 
         public void FillCustomersCombo()
@@ -55,7 +120,7 @@ namespace RED7Studios.FreePOS
             // Create a new DataTable called 'customertable' and store it in 'customtertable'.
             DataTable customertable = new DataTable("customertable");
             // Using the sql connection to create a new one using the connection string.
-            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
+            using (MySqlConnection sqlConn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString"))))
             {
                 // Using the sql adapter to create a new one using the query and 'sqlConn'.
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT customer FROM invoice_master WHERE customer <> 'NULL'", sqlConn))
@@ -80,7 +145,7 @@ namespace RED7Studios.FreePOS
             // Create a new DataTable called 'itemtable' and store it in 'itemtable'.
             DataTable itemtable = new DataTable("itemtable");
             // Using the sql connection to create a new one using the connection string.
-            using (MySqlConnection sqlConn = new MySqlConnection(File.ReadAllText("Data\\connectionString")))
+            using (MySqlConnection sqlConn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString"))))
             {
                 // Using the sql adapter to create a new one using the query and 'sqlConn'.
                 using (MySqlDataAdapter da = new MySqlDataAdapter("SELECT DISTINCT name FROM items WHERE name <> 'NULL'", sqlConn))

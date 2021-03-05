@@ -40,6 +40,7 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbCustomer = new System.Windows.Forms.Label();
             this.cbCustomer = new System.Windows.Forms.ComboBox();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // lvList
@@ -57,12 +58,13 @@
             this.lvList.FullRowSelect = true;
             this.lvList.GridLines = true;
             this.lvList.HideSelection = false;
-            this.lvList.Location = new System.Drawing.Point(13, 75);
+            this.lvList.Location = new System.Drawing.Point(13, 90);
             this.lvList.Name = "lvList";
-            this.lvList.Size = new System.Drawing.Size(958, 430);
+            this.lvList.Size = new System.Drawing.Size(958, 415);
             this.lvList.TabIndex = 35;
             this.lvList.UseCompatibleStateImageBehavior = false;
             this.lvList.View = System.Windows.Forms.View.Details;
+            this.lvList.SelectedIndexChanged += new System.EventHandler(this.lvList_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -112,7 +114,7 @@
             // 
             this.lbCustomer.AutoSize = true;
             this.lbCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCustomer.Location = new System.Drawing.Point(15, 50);
+            this.lbCustomer.Location = new System.Drawing.Point(14, 65);
             this.lbCustomer.Name = "lbCustomer";
             this.lbCustomer.Size = new System.Drawing.Size(59, 13);
             this.lbCustomer.TabIndex = 37;
@@ -122,11 +124,19 @@
             // 
             this.cbCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(80, 45);
+            this.cbCustomer.Location = new System.Drawing.Point(79, 60);
             this.cbCustomer.Name = "cbCustomer";
             this.cbCustomer.Size = new System.Drawing.Size(364, 24);
             this.cbCustomer.TabIndex = 36;
             this.cbCustomer.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // menu
+            // 
+            this.menu.Location = new System.Drawing.Point(1, 33);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(982, 24);
+            this.menu.TabIndex = 38;
+            this.menu.Text = "menu";
             // 
             // OrderList
             // 
@@ -137,6 +147,7 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.Controls.Add(this.menu);
             this.Controls.Add(this.lbCustomer);
             this.Controls.Add(this.cbCustomer);
             this.Controls.Add(this.lvList);
@@ -168,5 +179,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.MenuStrip menu;
     }
 }

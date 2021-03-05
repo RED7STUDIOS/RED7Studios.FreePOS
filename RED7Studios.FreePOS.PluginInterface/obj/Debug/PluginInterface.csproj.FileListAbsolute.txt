@@ -1,0 +1,17 @@
+E:\C Sharp Projects\School Information System\PluginInterface\bin\Debug\PluginInterface.dll
+E:\C Sharp Projects\School Information System\PluginInterface\bin\Debug\PluginInterface.pdb
+E:\C Sharp Projects\School Information System\PluginInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache
+E:\C Sharp Projects\School Information System\PluginInterface\obj\Debug\PluginInterface.dll
+E:\C Sharp Projects\School Information System\PluginInterface\obj\Debug\PluginInterface.pdb
+C:\Users\Mitchell\Downloads\School Information System\PluginInterface\bin\Debug\PluginInterface.dll
+C:\Users\Mitchell\Downloads\School Information System\PluginInterface\bin\Debug\PluginInterface.pdb
+C:\Users\Mitchell\Downloads\School Information System\PluginInterface\obj\Debug\PluginInterface.csprojAssemblyReference.cache
+C:\Users\Mitchell\Downloads\School Information System\PluginInterface\obj\Debug\PluginInterface.csproj.CoreCompileInputs.cache
+C:\Users\Mitchell\Downloads\School Information System\PluginInterface\obj\Debug\PluginInterface.dll
+C:\Users\Mitchell\Downloads\School Information System\PluginInterface\obj\Debug\PluginInterface.pdb
+H:\VS Projects\ClubsportOS\PluginInterface\bin\Debug\PluginInterface.dll
+H:\VS Projects\ClubsportOS\PluginInterface\bin\Debug\PluginInterface.pdb
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\PluginInterface.csprojAssemblyReference.cache
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\PluginInterface.csproj.CoreCompileInputs.cache
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\PluginInterface.dll
+H:\VS Projects\ClubsportOS\PluginInterface\obj\Debug\PluginInterface.pdb

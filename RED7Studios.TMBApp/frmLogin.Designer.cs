@@ -34,6 +34,7 @@
             this.tlpButtons = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpMain.SuspendLayout();
             this.SuspendLayout();
@@ -106,15 +107,30 @@
             this.tlpMain.Controls.Add(this.btnLogin, 0, 2);
             this.tlpMain.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tlpMain.Controls.Add(this.tlpButtons, 0, 0);
+            this.tlpMain.Controls.Add(this.btnSettings, 0, 3);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(1, 33);
             this.tlpMain.Name = "tlpMain";
-            this.tlpMain.RowCount = 3;
+            this.tlpMain.RowCount = 4;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(982, 484);
             this.tlpMain.TabIndex = 8;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Location = new System.Drawing.Point(3, 457);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(976, 24);
+            this.btnSettings.TabIndex = 8;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // frmLogin
             // 
@@ -133,7 +149,7 @@
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.Text = "Login";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tlpMain.ResumeLayout(false);
@@ -148,5 +164,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpButtons;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tlpMain;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
