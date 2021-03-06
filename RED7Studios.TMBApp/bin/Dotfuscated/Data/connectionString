@@ -1,1 +1,0 @@
-UPDATE employees SET lastname = 'Hill' WHERE option_id = 'settings.servername';
