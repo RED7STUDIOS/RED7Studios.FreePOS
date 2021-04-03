@@ -4,3 +4,9 @@ D:\GitHub\RED7Studios.TMBApp\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7S
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.dll
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.pdb
 D:\GitHub\RED7Studios.TMBApp\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.csprojAssemblyReference.cache
+D:\GitHub\RED7Studios.FreePOS\RED7Studios.FreePOS.PluginInterface\bin\Debug\RED7Studios.FreePOS.PluginInterface.dll
+D:\GitHub\RED7Studios.FreePOS\RED7Studios.FreePOS.PluginInterface\bin\Debug\RED7Studios.FreePOS.PluginInterface.pdb
+D:\GitHub\RED7Studios.FreePOS\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.csprojAssemblyReference.cache
+D:\GitHub\RED7Studios.FreePOS\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.csproj.CoreCompileInputs.cache
+D:\GitHub\RED7Studios.FreePOS\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.dll
+D:\GitHub\RED7Studios.FreePOS\RED7Studios.FreePOS.PluginInterface\obj\Debug\RED7Studios.FreePOS.PluginInterface.pdb

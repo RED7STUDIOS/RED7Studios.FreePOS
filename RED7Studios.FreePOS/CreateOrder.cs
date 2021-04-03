@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using AForge.Video;
+using AForge.Video.DirectShow;
+using MySql.Data.MySqlClient;
 using RED7Studios.FreePOS.PluginInterface;
 using RED7Studios.UI.Forms;
 using System;
@@ -8,14 +10,19 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+using ZXing;
 
 namespace RED7Studios.FreePOS
 {
     public partial class CreateOrder : ModernForm
     {
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
+
         // Create connection string variable.
         MySqlConnection conn = new MySqlConnection(Cryptography.Decrypt(File.ReadAllText("Data\\connectionString")));
 
@@ -54,6 +61,11 @@ namespace RED7Studios.FreePOS
 
         private void CreateOrder_Load(object sender, EventArgs e)
         {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo device in filterInfoCollection)
+                comboBox1.Items.Add(device.Name);
+            comboBox1.SelectedIndex = 0;
+
             // Fill the customers combo box using function.
             FillCustomersCombo();
             // Fill the items combo box using function.
@@ -182,10 +194,69 @@ namespace RED7Studios.FreePOS
 
         private void CreateOrder_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (videoCaptureDevice != null)
+            {
+                if (videoCaptureDevice.IsRunning)
+                    videoCaptureDevice.Stop();
+            }
+
             // Create new frmDashboard called 'dash' and pass username and access level.
             frmDashboard dash = new frmDashboard(_username, _accessLevel);
             // Show the 'dash' form.
             dash.Show();
+        }
+
+        private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                textBox1.Invoke(new MethodInvoker(delegate ()
+                {
+                    textBox1.Text = result.ToString();
+                }));
+
+                SoundPlayer player = new SoundPlayer("Data\\scanner.wav");
+                player.Play();
+
+                if (result.ToString() == "4356-3964")
+                {
+                    // Create a new string called 'arr' with a new string[4].
+                    string[] arr = new string[4];
+                    // Set the first one to the items combobox selected item then to string.
+                    arr[0] = "Strawberry Macaron";
+                    // Set the second one to the price.
+                    arr[1] = "3";
+                    // Set the third one to the quanity.
+                    arr[2] = "1";
+                    // Set the last one to the total.
+                    arr[3] = "3";
+
+                    // Create ListViewItem called 'lvi' and create a new ListViewItem with the 'arr' variable.
+                    ListViewItem lvi = new ListViewItem(arr);
+
+                    // Add the 'lvi' items to the list view.
+                    lvItems.Invoke(new MethodInvoker(delegate ()
+                    {
+                        lvItems.Items.Add(lvi);
+                    }));
+
+                    // Make the sub total the sub total minus the total then to string.
+                    tbSubTotal.Invoke(new MethodInvoker(delegate ()
+                    {
+                        tbSubTotal.Text = (Convert.ToInt32(tbSubTotal.Text) + Convert.ToInt32("3")).ToString();
+                    }));
+                }
+
+                if (videoCaptureDevice != null)
+                {
+                    if (videoCaptureDevice.IsRunning)
+                        videoCaptureDevice.SignalToStop();
+                }
+            }
+            pictureBox1.Image = bitmap;
         }
 
         private void AddDiscountToTotal()
@@ -287,6 +358,12 @@ namespace RED7Studios.FreePOS
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            if (videoCaptureDevice != null)
+            {
+                if (videoCaptureDevice.IsRunning)
+                    videoCaptureDevice.Stop();
+            }
+
             // Hide the form.
             Hide();
 
@@ -485,6 +562,13 @@ namespace RED7Studios.FreePOS
 
             // Make the sub total the sub total minus the total then to string.
             tbSubTotal.Text = (Convert.ToInt32(tbSubTotal.Text) + Convert.ToInt32(tbTotal.Text)).ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
         }
     }
 }

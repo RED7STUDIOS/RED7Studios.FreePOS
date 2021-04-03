@@ -34,7 +34,8 @@ namespace RED7Studios.FreePOS
 
         public static string Decrypt(string cipherText)
         {
-            string EncryptionKey = "Open-Source|Key|2021|Please-Do-Not-Leak-Our-Hard-Work"; // This is not the real key due to security reasons, you will not be able to use a database from a legit version.
+            // Open-Source|Key|2021|Please-Do-Not-Leak-Our-Hard-Work
+            string EncryptionKey = "JxfVXeG2Qmcpi6RKULYD0B3XSVDtxSiVjanhMBqu0fOr3Tvk6J3nLM1HAHxReQtE4IdbVgVKWq03eZ3Szdq1aKc530vt9daQjlgMw7cJWgBhNRtxWAH1DRJcqL7WdYXcnTLHzCnm2AbLXDrIPxVAbrXNmqIXpF6z0hoLRRZE1SKDGm9DTBd0Khpf6KXSAaT0m4KaMJzs"; // This is not the real key due to security reasons, you will not be able to use a database from a legit version.
             cipherText = cipherText.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
             using (Aes encryptor = Aes.Create())

@@ -60,6 +60,11 @@
             this.btnAddItem = new RED7Studios.UI.Controls.ModernButton();
             this.btnRemoveItem = new RED7Studios.UI.Controls.ModernButton();
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbDiscount
@@ -361,6 +366,43 @@
             this.menu.TabIndex = 60;
             this.menu.Text = "menu";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(563, 61);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(408, 23);
+            this.comboBox1.TabIndex = 61;
+            this.comboBox1.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(563, 90);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(408, 221);
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(563, 318);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(327, 23);
+            this.textBox1.TabIndex = 63;
+            this.textBox1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(896, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CreateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -370,6 +412,10 @@
             this.ColorScheme.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(100)))), ((int)(((byte)(158)))));
             this.ColorScheme.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(189)))));
             this.ColorScheme.SecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.btnRemoveItem);
             this.Controls.Add(this.btnAddItem);
@@ -403,6 +449,7 @@
             this.Text = "Create Order";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateOrder_FormClosing);
             this.Load += new System.EventHandler(this.CreateOrder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,6 +487,10 @@
         private UI.Controls.ModernButton btnAddItem;
         private UI.Controls.ModernButton btnRemoveItem;
         private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
