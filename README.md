@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/EzCarProject/EzCar/main/Content/Cover.png)
+![Logo](https://raw.githubusercontent.com/RED7Studios/RED7Studios.FreePOS/main/Content/Cover.png)
 ## Description
 FreePOS is a POS system, made for businesses. I have recently decided to release the source code because I don't really work on it anymore.
 
