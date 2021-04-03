@@ -16,7 +16,7 @@ FreePOS is a POS system, made for businesses. I have recently decided to release
 
 **_Steps:_**
 1. Download FreePOS<br>
-To download FreePOS, just navigate to "https://updates.cldm.ml/FreePOS" and then hit the "Latest Download".<br>
+To download FreePOS, just navigate to "https://updates.cldm.ml/freepos" and then hit the "Latest Download".<br>
 ![Downloading FreePOS](https://i.imgur.com/PtrOGMJ.png)<br>
 
 2. Extract EzCar Update Zip<br>
