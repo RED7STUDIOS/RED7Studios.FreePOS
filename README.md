@@ -33,7 +33,7 @@ Double-click it and run through the first time setup!<br>
 - A copy of Visual Studio 2019 or newer
 - A windows 10 or later computer
 - A zip extractor (7-zip or winrar)
-- A copy of the EzCar source code
+- A copy of the FreePOS source code
 - .Net Framework 4.0
 - Windows Forms (C#)
 
