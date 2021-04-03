@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/EzCarProject/EzCar/main/Content/Cover.png?token=AQIR5PXHKHXR2ZW5ZJ7TC63ACYQPO)
+![Logo](https://raw.githubusercontent.com/EzCarProject/EzCar/main/Content/Cover.png)
 ## Description
 FreePOS is a POS system, made for businesses. I have recently decided to release the source code because I don't really work on it anymore.
 
